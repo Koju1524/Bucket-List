@@ -74,3 +74,5 @@ yarn-debug.log*
 
 # End of https://www.toptal.com/developers/gitignore/api/rails
 node_modules
+
+.env
