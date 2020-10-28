@@ -10,6 +10,11 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
+    %header.header
+      %p.header_pageTitle 
+        = link_to 'Bucket List', root_path 
+      .user_avatar
+        = image_tag 'hot.jpg', class: 'user_avatar'
     %p.notice= notice
     %p.alert= alert
     = yield
