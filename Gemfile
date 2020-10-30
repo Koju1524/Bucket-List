@@ -29,6 +29,7 @@ gem 'devise'
 gem 'erb2haml'
 gem 'hamlit'
 gem 'rubocop-rails'
+gem 'faker'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
