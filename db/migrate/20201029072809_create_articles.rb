@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.references :user, null: false
       t.string :title, null: false
       t.text :reason, null: false
-      t.text :necessary_stufft, null: false
+      t.text :necessary_stuff, null: false
       t.date :expiration, null: false
       t.integer :achievement_flag, null: false
       t.timestamps

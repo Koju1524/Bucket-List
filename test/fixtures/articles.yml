@@ -5,7 +5,7 @@
 #  id               :integer          not null, primary key
 #  achievement_flag :integer          not null
 #  expiration       :date             not null
-#  necessary_stufft :text             not null
+#  necessary_stuff  :text             not null
 #  reason           :text             not null
 #  title            :string           not null
 #  created_at       :datetime         not null

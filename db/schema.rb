@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_29_072809) do
+ActiveRecord::Schema.define(version: 2020_10_30_081525) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "title", null: false
     t.text "reason", null: false
-    t.text "necessary_stufft", null: false
+    t.text "necessary_stuff", null: false
     t.date "expiration", null: false
     t.integer "achievement_flag", null: false
     t.datetime "created_at", precision: 6, null: false
