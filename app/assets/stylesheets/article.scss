@@ -1,12 +1,18 @@
 .container {
   border-bottom: black;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-family: Avenir;
+}
+
+.card {
+  border-bottom: 0.1em solid grey;
+  border-width: 1px;
+  padding-bottom: 30px;
 }
 
 .user_info {
   display: flex;
-  margin: 50px 0 10px 50px;
+  margin: 50px 0px 10px 50px;
 
   .article_user_avatar {
     width: 42px;
@@ -18,6 +24,15 @@
     font-size: 18px;
     font-weight: 500;
     margin-right: 20px;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .post_time {
+    position: relative;
+    left: 20px;
+    bottom: 8px;
   }
 }
 
@@ -47,15 +62,15 @@
   top: 15px;
 
   .heart_mark {
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     margin-right: 4px;
   }
 
-  .span { 
+  .number { 
     position: relative;
-    right: 10px;
-    top: 20px;
+    right: 2px;
+    bottom: 6px;
   }
   
   .comment_mark {

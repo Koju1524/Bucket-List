@@ -1,29 +1,30 @@
 .container
   .tabs
     .tabs_item_active
-      Bucket List
+      %div Bucket List
     .tabs_item
-      Bucket List Complete
+      %div Archieved Bucket List 
 
-  .card
-    .user_info
-      .user_avatar
-        = image_tag 'hot.jpg', class: 'article_user_avatar'
-      .user_name
-        Koju
-      .post_time
-        4 hour
-    .card_bucket_list
-      .card_title
-        %div.title
-          ・My Bucket List
-        %div.bucket_list
-          I wanna skydiving right on the water
-        = image_tag 'beach.jpg', class: 'bucket_list_image'
-      .card_iteam
-        .card_heart
-          = image_tag 'heart.png', class: 'heart_mark'
-          %span= 7
-        .card_comment
-          = image_tag 'comment.png', class: 'comment_mark'
-          %span= 8
+  - @articles.each do |article|
+    .card
+      .user_info
+        .user_avatar
+          = image_tag 'hot.jpg', class: 'article_user_avatar'
+        .user_name
+          Koju
+        .post_time
+          4 hour ago
+      .card_bucket_list
+        .card_title
+          %div.title
+            ・My Bucket List
+          %div.bucket_list
+            = article.title
+          = image_tag 'beach.jpg', class: 'bucket_list_image'
+        .card_iteam
+          .card_heart
+            = image_tag 'heart.png', class: 'heart_mark'
+            %span.number= 7
+          .card_comment
+            = image_tag 'comment.png', class: 'comment_mark'
+            %span.number= 8
