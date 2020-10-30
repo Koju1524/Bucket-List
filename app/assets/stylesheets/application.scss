@@ -2,6 +2,8 @@
 @import '_variables.scss';
 @import 'buttons';
 @import 'header';
+@import 'article';
+@import 'tabs';
 
 
 html {
@@ -31,9 +33,4 @@ body {
 a {
   text-decoration: none;
   color: $text-base-color;
-}
-
-.container {
-  padding: 20px 30px;
-  width: 100%;
 }
