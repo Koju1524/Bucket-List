@@ -1,9 +1,9 @@
 .container
   .tabs
-    .tabs_item_active
-      %div Bucket List
+    .tabs_item.active
+      Bucket List
     .tabs_item
-      %div Archieved Bucket List 
+      Archieved Bucket List
 
   - @articles.each do |article|
     .card
@@ -28,3 +28,4 @@
           .card_comment
             = image_tag 'comment.png', class: 'comment_mark'
             %span.number= 8
+    

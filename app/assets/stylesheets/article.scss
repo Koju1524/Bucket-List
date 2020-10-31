@@ -5,9 +5,8 @@
 }
 
 .card {
-  border-bottom: 0.1em solid grey;
-  border-width: 1px;
   padding-bottom: 30px;
+  margin-top: 5px;
 }
 
 .user_info {
@@ -26,25 +25,25 @@
     margin-right: 20px;
     position: relative;
     left: 10px;
-    bottom: 10px;
+    bottom: 14px;
   }
 
   .post_time {
     position: relative;
     left: 20px;
-    bottom: 8px;
+    bottom: 12px;
   }
 }
 
 .title {
   font-size: 20px;
-  padding-left: 20px;
+  padding-left: 15px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
 .bucket_list {
-  padding-left: 50px;
+  padding: 0 5px 0 20px;
   font-size: 18px;
   font-weight: 300;
 }
@@ -58,8 +57,8 @@
 .card_iteam {
   display: flex;
   position: relative;
-  left: 400px;
-  top: 15px;
+  left: 20px;
+  top: 18px;
 
   .heart_mark {
     width: 24px;
@@ -70,12 +69,12 @@
   .number { 
     position: relative;
     right: 2px;
-    bottom: 6px;
+    top: 1px;
   }
   
   .comment_mark {
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
     margin: 0 5px 0 7px;
   }
 }
