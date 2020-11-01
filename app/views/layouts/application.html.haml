@@ -15,8 +15,10 @@
     %header.header
       %p.header_pageTitle
         = link_to 'Bucket List', root_path, {:style=>'text-decoration:none;'}
-      .user_avatar
-        = image_tag 'hot.jpg', class: 'user_avatar'
+        .dropdown
+          = image_tag 'hot.jpg', class: 'user_avatar'
+          .dropdown-content.mini
+            = link_to 'Logout', destroy_user_session_path, {:style=>'text-decoration:none;'}
     %p.notice= notice
     %p.alert.p-0= alert
     = yield
