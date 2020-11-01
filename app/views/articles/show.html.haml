@@ -1,0 +1,40 @@
+.card
+  .user_info
+    .user_avatar
+      = image_tag 'hot.jpg', class: 'article_user_avatar'
+    .user_name
+      Koju
+    .post_time
+      4 hour ago
+    .dropdown
+      = image_tag 'shape.png', class: 'dropbtn'
+      .dropdown-content.mini
+        %a{:href => "#", :style=>'text-decoration:none;', :class => "css_class"} Edit
+        %a{:href => "#", :style=>'text-decoration:none;', :class => "css_class"} Delete
+  .card_bucket_list
+    .card_detail
+      %div.title
+        ・My Bucket List
+      %div.content
+        = @article.title
+      %div.title
+        ・Reason
+      %div.content
+        = @article.reason
+      %div.title
+        ・Necessary Stuff
+      %div.content
+        = @article.necessary_stuff
+      %div.title
+        ・Expiration
+      %div.content
+        05/4/2020
+      %div.bucket_list_image
+        = image_tag 'beach.jpg', class: 'bucket_list_image'
+    .card_iteam
+      .card_heart
+        = image_tag 'heart.png', class: 'heart_mark'
+        %span.number= 7
+      .card_comment
+        = image_tag 'comment.png', class: 'comment_mark'
+        %span.number= 8

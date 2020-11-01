@@ -2,6 +2,7 @@
   border-bottom: black;
   margin-bottom: 60px;
   font-family: Avenir;
+  color: black;
 }
 
 .card {
@@ -11,7 +12,7 @@
 
 .user_info {
   display: flex;
-  margin: 50px 0px 10px 50px;
+  margin: 50px 0 0 50px;
 
   .article_user_avatar {
     width: 42px;
@@ -38,7 +39,7 @@
 .title {
   font-size: 20px;
   padding-left: 15px;
-  margin-bottom: 20px;
+  margin: 7px 0  10px 0;
   font-weight: 500;
 }
 
@@ -46,10 +47,11 @@
   padding: 0 5px 0 20px;
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 5px;
 }
 
 .bucket_list_image {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 100%;
   height: 250px;
 }
@@ -59,6 +61,7 @@
   position: relative;
   left: 20px;
   top: 18px;
+  margin-top: 7px;
 
   .heart_mark {
     width: 24px;
