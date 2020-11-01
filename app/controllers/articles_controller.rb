@@ -13,5 +13,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build
   end
 
-  
+  def create
+  end
+
 end

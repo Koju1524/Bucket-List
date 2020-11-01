@@ -18,6 +18,8 @@
 #
 class Article < ApplicationRecord
 
+  enum achievement_flag: { Unachievement: 0, Achievement: 1 }
+
   belongs_to :user
   
 end

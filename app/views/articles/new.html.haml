@@ -1,1 +1,27 @@
-%p new
+.container
+  = form_with(model: @article, url: articles_path, method: 'post', local: true) do |f|
+    %div
+      = f.label :title, '・My Bucket List', class: 'title'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :reason, '・Reason', class: 'title'
+    %div
+      = f.text_area :reason, class: 'text'
+    %div
+      = f.label :necessary_stuff, '・Necessary Stuff', class: 'title'
+    %div
+      = f.text_area :necessary_stuff, class: 'text'
+    %div
+      = f.label :expiration, '・Expiration', class: 'title'
+    %div
+      = f.date_field :expiration, class: 'text'
+    %div
+      = f.label :picture, '・Imagination Picture', class: 'title'
+    %div
+      = f.file_field :picture, class: 'text'
+    %div
+      = f.label :achievement_flag, '・Achievement Flag', class: 'title'
+    %div
+      = f.select :achievement_flag, Article.achievement_flags.keys, {}, { class: 'text'}
+    = f.submit 'Submit', class: 'btn-primary' 
