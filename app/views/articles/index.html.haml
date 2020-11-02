@@ -12,7 +12,7 @@
           .user_avatar
             = image_tag 'hot.jpg', class: 'article_user_avatar'
           .user_name
-            Koju
+            = current_user.user_name
           .post_time
             4 hour ago
         .card_bucket_list
@@ -21,7 +21,10 @@
               ・My Bucket List
             %div.bucket_list
               = article.title
-            = image_tag 'beach.jpg', class: 'bucket_list_image'
+            - if article.picture&.attached?
+              = image_tag article.picture, class: 'bucket_list_image'
+            - else
+              = image_tag 'beach.jpg', class: 'bucket_list_image'
           .card_iteam
             .card_heart
               = image_tag 'heart.png', class: 'heart_mark'
