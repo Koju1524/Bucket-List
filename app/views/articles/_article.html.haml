@@ -13,10 +13,7 @@
           ・My Bucket List
         %div.bucket_list
           = article.title
-        - if article.picture&.attached?
-          = image_tag article.picture, class: 'bucket_list_image'
-        - else
-          = image_tag 'beach.jpg', class: 'bucket_list_image'
+        = image_tag article.picture, class: 'bucket_list_image'
       .card_iteam
         .card_heart
           = image_tag 'heart.png', class: 'heart_mark'
