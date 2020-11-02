@@ -16,10 +16,24 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to article_path(@article), notice: 'Successful Submit!!'
+      redirect_to article_path(@article), notice: 'Successful Submit !!'
     else 
-      flash.now[:error] = 'failed Submit'
+      flash.now[:error] = 'Failed Submit'
       render :new
+    end
+  end
+
+  def edit
+    @article = current_user.articles.find(params[:id])
+  end
+
+  def update
+    @article = current_user.articles.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: 'Successful Edit !!'
+    else 
+      flash.now[:error] = 'Failed Edit'
+      render :edit
     end
   end
 
