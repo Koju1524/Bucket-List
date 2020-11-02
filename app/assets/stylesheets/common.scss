@@ -1,13 +1,9 @@
 @import './variables';
 
 .dropbtn {
-  border: none;
-}
-
-.dropdown {
   position: relative;
-  left: 145px;
-  bottom: 12px;
+  left: 155px;
+  bottom: 14px;
   cursor: pointer;
   display: inline-block;
 }
@@ -15,7 +11,7 @@
 .dropdown-content {
   font-weight: normal;
   display: none;
-  right: 0;
+  right: 15px;
   position: absolute;
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -23,6 +19,11 @@
 
   &.mini {
     min-width: 85px;
+  }
+  &.mini1 {
+    min-width: 85px;
+    position: absolute;
+    left: 130px;
   }
 }
 

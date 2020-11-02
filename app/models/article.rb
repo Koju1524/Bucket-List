@@ -18,6 +18,21 @@
 #
 class Article < ApplicationRecord
 
+  enum achievement_flag: { Unachievement: 0, Achievement: 1 }
+
+  validates :title, presence: true
+  validates :title, length: { minimum: 2, maximum: 100 }
+
+  validates :reason, presence: true
+  validates :reason, length: { minimum: 2, maximum: 100 }
+
+  validates :necessary_stuff, presence: true
+  validates :necessary_stuff, length: { minimum: 2, maximum: 100 }
+
+  validates :expiration, presence: true
+
+  has_one_attached :picture
+
   belongs_to :user
-  
+
 end

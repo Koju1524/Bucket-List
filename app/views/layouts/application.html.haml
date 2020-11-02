@@ -14,9 +14,14 @@
   %body
     %header.header
       %p.header_pageTitle
-        = link_to 'Bucket List', root_path, {:style=>'text-decoration:none;', :class => "css_class"}
-      .user_avatar
-        = image_tag 'hot.jpg', class: 'user_avatar'
-    %p.notice= notice
-    %p.alert.p-0= alert
+        = link_to 'Bucket List', root_path, {:style=>'text-decoration:none;'}
+        .dropdown
+          = image_tag 'hot.jpg', class: 'user_avatar'
+          .dropdown-content.mini
+            = link_to 'Logout', destroy_user_session_path, {:style=>'text-decoration:none;'}
+    
+    - if flash.present?
+      .flash
+        - flash.each do |key,value|
+          %div{:class => key}= value
     = yield

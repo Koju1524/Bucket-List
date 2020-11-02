@@ -7,6 +7,7 @@
 @import 'flash';
 @import 'card';
 @import 'common';
+@import 'form';
 
 
 html {
@@ -36,4 +37,22 @@ body {
 a {
   text-decoration: none;
   color: $text-base-color;
+}
+
+.float_btn {
+  position: fixed;
+  bottom: 12px;
+  right: 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: $primary-color;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+  i {
+    margin-top: 24px;
+    margin-left: 2px;
+  }
 }
