@@ -6,7 +6,7 @@
       .user_name
         = current_user.user_name
       .post_time
-        = I18n.l(article.created_at, format: :default)
+        = date_format(article.created_at)
     .card_bucket_list
       .card_title
         %div.title
