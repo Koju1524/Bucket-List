@@ -1,37 +1,8 @@
 .container
-  .tabs
-    .tabs_item.active
-      Bucket List
-    .tabs_item
-      Archieved Bucket List
+  = render 'tabs'
 
   - @articles.each do |article|
-    = link_to article_path(article), {:style=>'color:black;text-decoration:none;'} do
-      .card
-        .user_info
-          .user_avatar
-            = image_tag 'hot.jpg', class: 'article_user_avatar'
-          .user_name
-            = current_user.user_name
-          .post_time
-            4 hour ago
-        .card_bucket_list
-          .card_title
-            %div.title
-              ・My Bucket List
-            %div.bucket_list
-              = article.title
-            - if article.picture&.attached?
-              = image_tag article.picture, class: 'bucket_list_image'
-            - else
-              = image_tag 'beach.jpg', class: 'bucket_list_image'
-          .card_iteam
-            .card_heart
-              = image_tag 'heart.png', class: 'heart_mark'
-              %span.number= 7
-            .card_comment
-              = image_tag 'comment.png', class: 'comment_mark'
-              %span.number= 8
+    = render 'article', article: article
   
   = link_to new_article_path do
     .float_btn

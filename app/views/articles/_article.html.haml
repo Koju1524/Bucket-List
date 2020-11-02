@@ -1,0 +1,23 @@
+= link_to article_path(article), {:style=>'color:black;text-decoration:none;'} do
+  .card
+    .user_info
+      .user_avatar
+        = image_tag 'hot.jpg', class: 'article_user_avatar'
+      .user_name
+        = current_user.user_name
+      .post_time
+        = date_format(article.created_at)
+    .card_bucket_list
+      .card_title
+        %div.title
+          ・My Bucket List
+        %div.bucket_list
+          = article.title
+        = image_tag article.picture, class: 'bucket_list_image'
+      .card_iteam
+        .card_heart
+          = image_tag 'heart.png', class: 'heart_mark'
+          %span.number= 7
+        .card_comment
+          = image_tag 'comment.png', class: 'comment_mark'
+          %span.number= 8
