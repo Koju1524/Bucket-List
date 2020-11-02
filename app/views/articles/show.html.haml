@@ -9,7 +9,7 @@
     .dropdown
       = image_tag 'shape.png', class: 'dropbtn'
       .dropdown-content.mini1
-        %a{:href => "#", :style=>'text-decoration:none;'} Edit
+        = link_to 'Edit', edit_article_path(@article)
         %a{:href => "#", :style=>'text-decoration:none;'} Delete
   .card_bucket_list
     .card_detail

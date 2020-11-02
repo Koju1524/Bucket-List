@@ -24,10 +24,10 @@ class Article < ApplicationRecord
   validates :title, length: { minimum: 2, maximum: 100 }
 
   validates :reason, presence: true
-  validates :reason, length: { minimum: 2, maximum: 100 }
+  validates :reason, length: { minimum: 2, maximum: 150 }
 
   validates :necessary_stuff, presence: true
-  validates :necessary_stuff, length: { minimum: 2, maximum: 100 }
+  validates :necessary_stuff, length: { minimum: 2, maximum: 150 }
 
   validates :expiration, presence: true
 
