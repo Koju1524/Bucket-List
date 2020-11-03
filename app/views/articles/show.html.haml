@@ -3,14 +3,15 @@
     .user_avatar
       = image_tag 'hot.jpg', class: 'article_user_avatar'
     .user_name
-      = current_user.user_name
+      = current_user&.user_name
     .post_time
       = @article.display_created_at
-    .dropdown
-      = image_tag 'shape.png', class: 'dropbtn'
-      .dropdown-content.mini1
-        = link_to 'Edit', edit_article_path(@article)
-        = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Are you sure?' }
+    - if user_signed_in?
+      .dropdown
+        = image_tag 'shape.png', class: 'dropbtn'
+        .dropdown-content.mini1
+          = link_to 'Edit', edit_article_path(@article)
+          = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Are you sure?' }
         
   .card_bucket_list
     .card_detail
