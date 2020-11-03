@@ -29,4 +29,8 @@ class User < ApplicationRecord
   validates_uniqueness_of :user_name
   validates_presence_of :user_name
 
+  def has_written?(article)
+    articles.exists?(id: article.id)
+  end
+
 end

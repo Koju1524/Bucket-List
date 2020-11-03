@@ -4,7 +4,7 @@
       .user_avatar
         = image_tag 'hot.jpg', class: 'article_user_avatar'
       .user_name
-        = current_user.user_name
+        = article.author_name 
       .post_time
         = date_format(article.created_at)
     .card_bucket_list

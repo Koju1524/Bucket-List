@@ -39,4 +39,8 @@ class Article < ApplicationRecord
     I18n.l(self.created_at, format: :long)
   end
 
+  def author_name
+    user.user_name
+  end
+
 end

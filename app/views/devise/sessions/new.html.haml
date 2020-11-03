@@ -1,18 +1,16 @@
 .container
-  %div.login-image 
-    = image_tag 'social.png'
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.label :email, class:'text'
+      = f.label :email, '・E-mail', class:'text'
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class: 'box'
     .field
-      = f.label :password, class:'text'
+      = f.label :password, '・Password', class:'text'
       %br/
       = f.password_field :password, autocomplete: "current-password", class: 'box'
     - if devise_mapping.rememberable?
       .field
         = f.check_box :remember_me, class: 'check_box'
-        = f.label :remember_me, class: 'text'
+        = f.label :remember_me, class: 'check_letter'
     .actions
       = f.submit "Login", class: 'btn-primary'
