@@ -3,8 +3,9 @@
 # Table name: profiles
 #
 #  id         :integer          not null, primary key
+#  bio        :text
 #  birthday   :date
-#  gender     :integer
+#  location   :string
 #  subscribed :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
