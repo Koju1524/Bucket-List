@@ -3,7 +3,7 @@
     .user_avatar
       = image_tag 'hot.jpg', class: 'article_user_avatar'
     .user_name
-      = current_user&.user_name
+      = @article.author_name 
     .post_time
       = @article.display_created_at
     - if user_signed_in? && current_user.has_written?(@article)
