@@ -6,7 +6,7 @@
       = current_user&.user_name
     .post_time
       = @article.display_created_at
-    - if user_signed_in?
+    - if user_signed_in? && current_user.has_written?(@article)
       .dropdown
         = image_tag 'shape.png', class: 'dropbtn'
         .dropdown-content.mini1
