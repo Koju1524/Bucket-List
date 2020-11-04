@@ -31,6 +31,7 @@ class Article < ApplicationRecord
 
   validates :expiration, presence: true
 
+  has_many :likes, dependent: :destroy
   has_one_attached :picture
 
   belongs_to :user
@@ -43,4 +44,8 @@ class Article < ApplicationRecord
     user.user_name
   end
 
+  def like_count
+    likes.count
+  end
+  
 end
