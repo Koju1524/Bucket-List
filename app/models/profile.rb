@@ -20,5 +20,8 @@ class Profile < ApplicationRecord
   belongs_to :user
 
   has_one_attached :avatar
+
+  validates :location, presence: true
+  validates :location, length: { minimum: 2, maximum: 20}
   
 end
