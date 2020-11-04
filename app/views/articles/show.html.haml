@@ -1,7 +1,7 @@
 .card
   .user_info
     .user_avatar
-      = image_tag 'hot.jpg', class: 'article_user_avatar'
+      = image_tag @article.user.avatar_image, class: 'article_user_avatar'
     .user_name
       = @article.author_name 
     .post_time
@@ -10,9 +10,8 @@
       .dropdown
         = image_tag 'shape.png', class: 'dropbtn'
         .dropdown-content.mini1
-          = link_to 'Edit', edit_article_path(@article)
-          = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Are you sure?' }
-        
+          = link_to 'Edit', edit_article_path(@article), {:style=>'text-decoration:none;'}
+          = link_to 'Delete', article_path(@article), { method: 'delete', confirm: 'Are you sure?'} 
   .card_bucket_list
     .card_detail
       %div.title

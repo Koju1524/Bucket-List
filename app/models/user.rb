@@ -25,6 +25,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :articles, dependent: :destroy
+  has_one :profile, dependent: :destroy
+
+  delegate :location, :birthday, to: :profile, allow_nil: true
   
   validates_uniqueness_of :user_name
   validates_presence_of :user_name
@@ -33,4 +36,16 @@ class User < ApplicationRecord
     articles.exists?(id: article.id)
   end
 
+  def prepare_profile
+    profile || build_profile
+  end
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else 
+      'hot.jpg'
+    end  
+  end
+  
 end
