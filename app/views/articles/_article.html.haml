@@ -15,9 +15,16 @@
           = article.title
         = image_tag article.picture, class: 'bucket_list_image'
       .card_iteam
-        .card_heart
-          = image_tag 'heart.png', class: 'heart_mark'
-          %span.number= 7
+        - if user_signed_in?
+          - if current_user.has_liked?(article)
+            .card_heart
+              = link_to article_like_path(article), data: { method: 'delete' } do
+                = image_tag 'heart.png', class: 'heart_mark'
+          - else
+            .card_heart
+              = link_to article_like_path(article), data: { method: 'post' } do
+                = image_tag 'heart1.png', class: 'heart_mark'
+        %span.number= article.like_count
         .card_comment
           = image_tag 'comment.png', class: 'comment_mark'
           %span.number= 8
