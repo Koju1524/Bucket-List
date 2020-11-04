@@ -1,0 +1,91 @@
+.container {
+  margin: 20px 0;
+  font-family: Avenir;
+  font-weight: 500;
+}
+
+.profilePage_user {
+  display: flex;
+
+  .user_image {
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    margin-left: 15px;
+  }
+
+  .profilePage_user_name {
+    position: relative;
+    left: 30px;
+    bottom: -8px;
+  }
+}
+
+.profilePage_user_private_info {
+  display: flex;
+  margin: 15px 0 0 30px;
+
+  .birthday {
+    position: relative;
+    left: 35px;
+    bottom: 23px;
+    }
+  
+  .profilePage_user.location {
+    position: relative;
+    left: 55px;
+    bottom: -4px;
+  
+    .location {
+      position: relative;
+      left: 20px;
+      bottom: 3px;
+    }
+  }
+}
+
+.profilePage_user_bio {
+  position: relative;
+  left: 20px;
+  bottom: 12px;
+  margin-right: 20px;
+}
+
+.profilePage_user_info_figures {
+  display: flex;
+  margin: 20px 20px 0 8px;
+
+  .posts {
+    position: relative;
+    left: 30px;
+    top: 10px;
+  }
+
+  .achieved {
+    position: relative;
+    left: 123px;
+    top: 10px;
+  }
+
+  .following {
+    position: relative;
+    left: 223px;
+    top: 10px;
+  }
+
+  .follower {
+    position: relative;
+    left: 323px;
+    top: 10px;
+  }
+}
+
+.profilePage_user_info_title {
+  display: flex;
+  margin: 0 15px 0 0;
+
+  p {
+    padding: 0 20px 0 30px;
+  }
+}
+

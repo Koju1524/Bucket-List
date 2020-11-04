@@ -8,6 +8,7 @@
 @import 'card';
 @import 'common';
 @import 'form';
+@import 'profile';
 
 
 html {
@@ -42,7 +43,7 @@ a {
 .float_btn {
   position: fixed;
   bottom: 12px;
-  right: 20px;
+  right: 25px;
   width: 64px;
   height: 64px;
   border-radius: 100%;

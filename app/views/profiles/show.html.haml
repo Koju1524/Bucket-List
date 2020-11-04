@@ -1,0 +1,32 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag 'hot.jpg', class: 'user_image'
+    .profilePage_user_name
+      = current_user.user_name
+    .profilePage_user_actionButton
+      = link_to 'Profile Edit', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+  .profilePage_user_private_info
+    .profilePage_user_birthday
+      %i.fas.fa-birthday-cake
+      %p.birthday 07/12/1995
+    .profilePage_user.location
+      %i.fas.fa-location-arrow
+      %p.location Tokyo
+  .profilePage_user_bio
+    feuvejnjenenekkekcjdenjhiuhcguivcdkvm kldmlk mvdlk mvdkl dmlk
+  .profilePage_user_info_figures
+    %p.posts 15
+    %p.achieved  9
+    %p.following 32
+    %p.follower 24
+  .profilePage_user_info_title
+    %p Posts
+    %p Achieved 
+    %p Following
+    %p Follower
+  
+  = render 'commons/tabs'
+
+  - current_user.articles.each do |article|
+    = render 'articles/article', article: article
