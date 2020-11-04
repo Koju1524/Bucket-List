@@ -2,7 +2,7 @@
   .card
     .user_info
       .user_avatar
-        = image_tag 'hot.jpg', class: 'article_user_avatar'
+        = image_tag article.user.avatar_image, class: 'article_user_avatar'
       .user_name
         = article.author_name 
       .post_time

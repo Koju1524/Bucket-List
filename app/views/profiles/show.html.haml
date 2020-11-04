@@ -1,7 +1,7 @@
 .container.profilePage
   .profilePage_user
     .profilePage_user_image
-      = image_tag 'hot.jpg', class: 'user_image'
+      = image_tag current_user.avatar_image, class: 'user_image'
     .profilePage_user_name
       = current_user.user_name
     .profilePage_user_actionButton
@@ -9,12 +9,14 @@
   .profilePage_user_private_info
     .profilePage_user_birthday
       %i.fas.fa-birthday-cake
-      %p.birthday 07/12/1995
+      %p.birthday 
+        = current_user.birthday
     .profilePage_user.location
       %i.fas.fa-location-arrow
-      %p.location Tokyo
+      %p.location 
+        = current_user.location
   .profilePage_user_bio
-    feuvejnjenenekkekcjdenjhiuhcguivcdkvm kldmlk mvdlk mvdkl dmlk
+    = current_user.profile&.bio
   .profilePage_user_info_figures
     %p.posts 15
     %p.achieved  9
