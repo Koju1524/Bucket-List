@@ -44,4 +44,8 @@ class Article < ApplicationRecord
     user.user_name
   end
 
+  def like_count
+    likes.count
+  end
+  
 end
