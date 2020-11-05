@@ -2,7 +2,8 @@
   .card
     .user_info
       .user_avatar
-        = image_tag article.user.avatar_image, class: 'article_user_avatar'
+        = link_to account_path(article.user) do
+          = image_tag article.user.avatar_image, class: 'article_user_avatar'
       .user_name
         = article.author_name 
       .post_time
