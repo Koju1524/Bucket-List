@@ -1,0 +1,37 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag user.avatar_image, class: 'user_image'
+    .profilePage_user_name
+      = user.user_name
+    .profilePage_user_actionButton
+      - if user == current_user 
+        = link_to 'Profile Edit', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+      - else 
+        = link_to 'Follow', '#', {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+  .profilePage_user_private_info
+    .profilePage_user_birthday
+      %i.fas.fa-birthday-cake
+      %p.birthday 
+        = user.birthday
+    .profilePage_user.location
+      %i.fas.fa-location-arrow
+      %p.location 
+        = user.location
+  .profilePage_user_bio
+    = user.profile&.bio
+  .profilePage_user_info_figures
+    %p.posts 15
+    %p.achieved  9
+    %p.following 32
+    %p.follower 24
+  .profilePage_user_info_title
+    %p Posts
+    %p Achieved 
+    %p Following
+    %p Follower
+  
+  = render 'commons/tabs'
+
+  - user.articles.each do |article|
+    = render 'articles/article', article: article
