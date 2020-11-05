@@ -23,3 +23,6 @@ document.addEventListener('turbolinks:load',  () => {
     window.alert('profile, My bucket list')
   })
 })
+
+require("trix")
+require("@rails/actiontext")
