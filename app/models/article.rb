@@ -28,7 +28,6 @@ class Article < ApplicationRecord
 
   validates :necessary_stuff, presence: true
   
-
   validates :expiration, presence: true
 
   has_many :likes, dependent: :destroy
