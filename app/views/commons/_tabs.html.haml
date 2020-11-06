@@ -1,5 +1,5 @@
 .tabs
-  .tabs_item.active
-    = link_to 'Bucket List', timeline_path, {:style=>'text-decoration:none; color:white'}
-  .tabs_item
-    Archieved Bucket List
+  .tabs_item{class: "#{add_active_class(timeline_path)}"}
+    = link_to 'Bucket List', timeline_path, {:style=>'text-decoration:none; color:black'}
+  .tabs_item{class: "#{add_active_class(root_path)}"}
+    = link_to 'Achieved Bucket List', root_path, {:style=>'text-decoration:none; color:black; font-weight:450;'}
