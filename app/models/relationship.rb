@@ -21,4 +21,14 @@
 class Relationship < ApplicationRecord
   belongs_to :follower, class_name: 'User'
   belongs_to :following, class_name: 'User'
+
+  
+  def follower_count
+    followers.count
+  end
+
+  def following_count
+    followings.count
+  end
+
 end
