@@ -24,10 +24,10 @@
   .profilePage_user_bio
     = user.profile&.bio
   .profilePage_user_info_figures
-    %p.posts 7
+    %p.posts= @user&.articles&.count || current_user.articles.count
     %p.achieved  9
-    %p.following= @user.following_count
-    %p.follower= @user.follower_count
+    %p.following= @user&.followings&.count || current_user.followings.count
+    %p.follower= @user&.followers&.count || current_user.followers.count
   .profilePage_user_info_title
     %p Posts
     %p Achieved 
