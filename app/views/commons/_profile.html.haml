@@ -33,8 +33,6 @@
     %p Achieved 
     %p Following
     %p Follower
-  
-  = render 'commons/tabs'
 
   - user.articles.each do |article|
-    = render 'articles/article', article: article
+    = render 'commons/article', article: article
