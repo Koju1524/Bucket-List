@@ -66,14 +66,6 @@ class User < ApplicationRecord
   def prepare_profile
     profile || build_profile
   end
-
-  def avatar_image
-    if profile&.avatar&.attached?
-      profile.avatar
-    else 
-      'hot.jpg'
-    end  
-  end
   
   private
   def get_user_id(user)

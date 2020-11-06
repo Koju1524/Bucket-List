@@ -31,6 +31,7 @@ gem 'hamlit'
 gem 'rubocop-rails'
 gem 'faker'
 gem 'bootstrap'
+gem 'active_decorator'
 
 
 # Use Active Storage variant
