@@ -16,13 +16,26 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import $ from 'jquery'
-
-document.addEventListener('turbolinks:load',  () => {
-  $('.user_avatar').on('click', () => {
-    window.alert('profile, My bucket list')
-  })
-})
-
 require("trix")
 require("@rails/actiontext")
+
+import $ from 'jquery'
+import axios from 'axios'
+
+const handleHeardDisplay = (hasLiked) => {
+  if (hasLiked) {
+    $('.active-heart').removeClass('hidden')
+  } else {
+    $('.inactive-heart').removeClass('hidden')
+  }
+}
+
+document.addEventListener('turbolinks:load',  () => {
+  const dataset = $('#article-show').data()
+  const articleId = dataset.articleId
+  axios.get(`/articles/${articleId}/like`)
+    .then((response) => {
+      const hasLiked = response.data.hasLiked
+      handleHeardDisplay(hasLiked)
+    })
+})
