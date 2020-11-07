@@ -1,0 +1,38 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag user.avatar_image, class: 'user_image'
+    .profilePage_user_name
+      = user.user_name
+    .profilePage_user_actionButton
+      - if user == current_user 
+        = link_to 'Profile Edit', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+      - else 
+        - if current_user&.has_followed?(user)
+          = link_to 'Unfollow', account_unfollows_path(user), { method: 'post', class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+        - else
+          = link_to 'Follow', account_follows_path(user), { method: 'post', class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+  .profilePage_user_private_info
+    .profilePage_user_birthday
+      %i.fas.fa-birthday-cake
+      %p.birthday 
+        = user.birthday || 'Undifine'
+    .profilePage_user.location
+      %i.fas.fa-location-arrow
+      %p.location 
+        = user.location || 'Undifine'
+  .profilePage_user_bio
+    = user.profile&.bio
+  .profilePage_user_info_figures
+    %p.posts= @user&.articles&.count || current_user.articles.count
+    %p.achieved  9
+    %p.following= @user&.followings&.count || current_user.followings.count
+    %p.follower= @user&.followers&.count || current_user.followers.count
+  .profilePage_user_info_title
+    %p Posts
+    %p Achieved 
+    %p Following
+    %p Follower
+
+  - user.articles.each do |article|
+    = render 'commons/article', article: article

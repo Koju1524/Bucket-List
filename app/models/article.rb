@@ -28,24 +28,11 @@ class Article < ApplicationRecord
 
   validates :necessary_stuff, presence: true
   
-
   validates :expiration, presence: true
 
   has_many :likes, dependent: :destroy
   has_one_attached :picture
 
   belongs_to :user
-
-  def display_created_at
-    I18n.l(self.created_at, format: :long)
-  end
-
-  def author_name
-    user.user_name
-  end
-
-  def like_count
-    likes.count
-  end
   
 end

@@ -53,39 +53,39 @@
 
 .profilePage_user_info_figures {
   display: flex;
-  margin: 20px 20px 0 8px;
+  margin: 0 20px 0 8px;
 
   .posts {
     position: relative;
-    left: 30px;
-    top: 10px;
+    left: 20px;
+    top: 25px;
   }
 
   .achieved {
     position: relative;
-    left: 123px;
-    top: 10px;
+    left: 100px;
+    top: 25px;
   }
 
   .following {
     position: relative;
-    left: 223px;
-    top: 10px;
+    left: 200px;
+    top: 25px;
   }
 
   .follower {
     position: relative;
-    left: 323px;
-    top: 10px;
+    left: 295px;
+    top: 25px;
   }
 }
 
 .profilePage_user_info_title {
   display: flex;
-  margin: 0 15px 0 0;
+  margin: 0 5px 0 2px;
 
   p {
-    padding: 0 20px 0 30px;
+    padding: 17px;
   }
 }
 
