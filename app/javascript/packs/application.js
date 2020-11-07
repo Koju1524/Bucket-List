@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
@@ -19,50 +18,4 @@ require("channels")
 require("trix")
 require("@rails/actiontext")
 
-import $ from 'jquery'
-import axios from 'axios'
-import { csrfToken } from 'rails-ujs'
 
-const handleHeardDisplay = (hasLiked) => {
-  if (hasLiked) {
-    $('.active-heart').removeClass('hidden')
-  } else {
-    $('.inactive-heart').removeClass('hidden')
-  }
-}
-
-axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
-
-document.addEventListener('turbolinks:load',  () => {
-  const dataset = $('#article-show').data()
-  const articleId = dataset.articleId
-
-  axios.get(`/articles/${articleId}/like`)
-    .then((response) => {
-      const hasLiked = response.data.hasLiked
-      handleHeardDisplay(hasLiked)
-    })
-
-  $('.inactive-heart').on('click', () => {
-    axios.post(`/articles/${articleId}/like`)
-      .then((response) => {
-        console.log(response)
-      }) 
-      .catch((e) => {
-        window.alert('Error')
-        console.log(e)
-      })
-  })
-
-  $('.active-heart').on('click', () => {
-    axios.delete(`/articles/${articleId}/like`)
-      .then((response) => {
-        console.log(response)
-      }) 
-      .catch((e) => {
-        window.alert('Error')
-        console.log(e)
-      })
-  })
-
-})
