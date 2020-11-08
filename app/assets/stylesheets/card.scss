@@ -1,9 +1,53 @@
 .card {
   width: 100%;
-  margin: 3px 3px;
+  margin: 3px 3px 30px 3px;
 }
 
 .content {
   padding-left: 30px;
   font-family: Avenir;
 }
+
+.article {
+  margin-left: 20px;
+
+  .figure {
+    position: relative;
+    top: -35px;
+    left: 140px;
+  }
+
+  .article_comment {
+    display: flex;
+    position: relative;
+    top: -50px;
+    left: -25px;
+  
+    .comment_user_avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    p {
+      padding: 0 10px 0 20px;
+      font-size: 12px;
+    }
+
+    .comment_content {
+      width: 200px;
+      height: 20px;
+    }
+  }
+
+  .comment_mark {
+    position: relative;
+    bottom: 105px;
+    right: -365px;
+  }
+
+}
+
+
+
+

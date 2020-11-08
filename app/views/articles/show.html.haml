@@ -44,4 +44,22 @@
         = image_tag 'comment.png', class: 'comment_mark'
         %span.number= 8
       
-= javascript_pack_tag 'article'    
+= javascript_pack_tag 'article'   
+
+
+.article
+  %h4 Comments
+  .comment_btn
+    %p.figure= 15
+    = link_to new_article_comment_path(@article) do
+      .btn-secondary Comment Add
+  - @comments.each do |comment|
+    .article_comment
+      %p= image_tag 'hot.jpg', class:'comment_user_avatar'
+      %p.comment_content= comment.content
+    .dropdown
+      = image_tag 'shape.png', class:'comment_mark'
+      .dropdown-content.mini2
+        = link_to 'Edit', edit_article_comment_path(@article, comment.id), {style:'text-decoration:none;'}
+        = link_to 'Delete', article_comment_path(@article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;color:black;'}
+  

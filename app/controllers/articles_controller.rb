@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comments = @article.comments
   end
 
   def new
@@ -40,7 +41,7 @@ class ArticlesController < ApplicationController
   def destroy
     article = current_user.articles.find(params[:id])
     article.destroy!
-    redirect_to root_path, notice: 'Successful Delete !!'
+    redirect_to root_path, notice: ' Deleted Bucketn List'
   end
 
   private

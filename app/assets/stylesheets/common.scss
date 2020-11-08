@@ -20,10 +20,16 @@
   &.mini {
     min-width: 85px;
   }
+
   &.mini1 {
     min-width: 85px;
     position: absolute;
     left: 70px;
+  }
+
+  &.mini2 {
+    position: absolute;
+    top: -80px;
   }
 }
 
