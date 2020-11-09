@@ -14,10 +14,6 @@
 #  index_comments_on_article_id  (article_id)
 #  index_comments_on_user_id     (user_id)
 #
-require 'test_helper'
-
-class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class CommentSerializer < ActiveModel::Serializer
+  attributes :id, :content
 end

@@ -32,6 +32,7 @@ gem 'rubocop-rails'
 gem 'faker'
 gem 'bootstrap'
 gem 'active_decorator'
+gem 'active_model_serializers'
 
 
 # Use Active Storage variant
