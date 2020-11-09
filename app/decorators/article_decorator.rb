@@ -11,5 +11,4 @@ module ArticleDecorator
   def like_count
     likes.count
   end
-  
 end
