@@ -39,7 +39,6 @@
           = image_tag 'heart.png', class: 'heart_mark'
         .card_heart.hidden.inactive-heart
           = image_tag 'heart1.png', class: 'heart_mark'
-      %span.number= @article.like_count
       
 = javascript_pack_tag 'article'   
 
@@ -56,6 +55,6 @@
         Comment Add
     .article_comment
       %p= image_tag 'hot.jpg', class:'comment_user_avatar'
-      %p= 6
+      %p= @comment
     .dropdown
       = image_tag 'shape.png', class:'comment_mark'

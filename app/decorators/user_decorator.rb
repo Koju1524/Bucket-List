@@ -6,7 +6,7 @@ module UserDecorator
     if profile&.avatar&.attached?
       profile.avatar
     else 
-      'hot.jpg'
+      'smile.png'
     end  
   end
   
