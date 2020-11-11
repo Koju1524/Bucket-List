@@ -50,21 +50,11 @@
     .btn-secondary.show-comment-form{style:'text-decoration:none;'}
       Comment Add
 
-    .comment_text_area.hidden
+    .comment-text-area.hidden
       = text_area_tag :comment_content, '', class: 'sm'
-      .btn-tertiary
+      .btn-tertiary.add-comment-button
         Comment Add
 
-    .comments_container
-      - @comments.each do |comment|
-        .article_comment
-          .article_comment_detail
-            = image_tag comment.user.profile.avatar, class:'comment_user_avatar'
-          .article_comment_detail
-            %p= comment.content 
-          - if comment.user == current_user
-            .dropdown
-              = image_tag 'shape.png', class:'comment_mark'
-              .dropdown-content.mini2
-                = link_to 'Edit', edit_article_comment_path(@article, comment.id), {:style=>'text-decoration:none;'}
-                = link_to 'Delete', article_comment_path(@article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}
+    .comments-container
+
+      

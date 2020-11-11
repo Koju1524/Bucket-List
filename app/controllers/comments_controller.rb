@@ -1,6 +1,12 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    article = Article.find(params[:article_id])
+    comments = article.comments
+    render json: comments
+  end
+
   def new
     @article = Article.find(params[:article_id])
     @comment = Comment.new
@@ -11,12 +17,9 @@ class CommentsController < ApplicationController
     params[:comment][:user_id]= current_user.id
     params[:comment][:article_id] = @article.id
     @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to article_path(@article), notice: 'Add Comment!!'
-    else 
-      flash.now[:error] = 'Failed comment'
-      render :new
-    end
+    @comment.save!
+
+    render json: @comment
   end
 
   def edit
