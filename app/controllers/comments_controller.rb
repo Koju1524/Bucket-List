@@ -7,10 +7,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    binding.pry
     @article = Article.find(params[:article_id])
-    params[:comment][:user_id] = current_user.id
-    @comment = Comments.new(comment_params)
+    params[:comment][:user_id]= current_user.id
+    params[:comment][:article_id] = @article.id
+    @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to article_path(@article), notice: 'Add Comment!!'
     else 
@@ -19,6 +19,28 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+    if @comment.update(comment_params)
+      redirect_to article_path(@article), notice: 'Edit Comment!!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    article = Article.find(params[:article_id])
+    comment = article.comments.find(params[:id])
+    comment.destroy!
+    redirect_to article_path(article), notice: 'Deleted Comment'
+
+  end
   private
   def comment_params
     params.require(:comment).permit(

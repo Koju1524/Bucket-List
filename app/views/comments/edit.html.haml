@@ -3,7 +3,7 @@
     - @comment.errors.full_messages.each do |message|
       %li= message
 
-= form_with(model: @comment, url: article_comment_path(@comment.article), method: 'put' , local: true) do |f|
+= form_with(model: @comment, url: article_comment_path(@article, @comment), method: 'put' , local: true) do |f|
   %div
     = f.label :cotent, '・Comment Edit', class: 'title'
   %div
