@@ -40,9 +40,6 @@
         .card_heart.hidden.inactive-heart
           = image_tag 'heart1.png', class: 'heart_mark'
       %span.number= @article.like_count
-      .card_comment
-        = image_tag 'comment.png', class: 'comment_mark'
-        %span.number= @article.comments.count
       
 = javascript_pack_tag 'article'   
 
@@ -51,16 +48,14 @@
   %h4 Comments
   .comment_btn
     %p.figure= @article.comments.count
-    = link_to new_article_comment_path(@article) do
-      .btn-secondary{style:'text-decoration:none;'}
+    .btn-secondary.show-comment-form{style:'text-decoration:none;'}
+      Comment Add
+    .comment_text_area.hidden
+      = text_area_tag :comment_content, '', class: 'sm'
+      .btn-tertiary
         Comment Add
-  - @comments.each do |comment|
     .article_comment
-      %p= image_tag comment.article.user.profile.avatar, class:'comment_user_avatar'
-      %p.comment_content= comment.content
+      %p= image_tag 'hot.jpg', class:'comment_user_avatar'
+      %p= 6
     .dropdown
       = image_tag 'shape.png', class:'comment_mark'
-      .dropdown-content.mini2
-        = link_to 'Edit', edit_article_comment_path(@article, comment.id), {style:'text-decoration:none;color:black;'}
-        = link_to 'Delete', article_comment_path(@article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;color:black;'}
-  
