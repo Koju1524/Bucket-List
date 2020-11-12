@@ -37,6 +37,12 @@
     
     p {
       font-size: 12px;
+      width: 300px;
+      height: 40px;
+      position: relative;
+      top: -7px;
+      right: -10px;
+      word-wrap: break-word;
     }
 
     .comment_content {
@@ -45,9 +51,9 @@
   }
 
   .comment_mark {
-    position: absolute;
-    bottom: 30px;
-    right: -185px;
+    position: relative;
+    top: -58px;
+    left: 340px;
   }
 
 }
