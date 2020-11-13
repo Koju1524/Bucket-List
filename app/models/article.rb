@@ -5,6 +5,7 @@
 #  id               :integer          not null, primary key
 #  achievement_flag :integer          not null
 #  expiration       :date             not null
+#  necessary_stuff  :text
 #  reason           :text             not null
 #  title            :string           not null
 #  created_at       :datetime         not null
@@ -30,6 +31,7 @@ class Article < ApplicationRecord
   
   validates :expiration, presence: true
 
+  has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_one_attached :picture
 

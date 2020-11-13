@@ -1,9 +1,63 @@
 .card {
   width: 100%;
-  margin: 3px 3px;
+  margin: 3px 3px 30px 3px;
 }
 
 .content {
   padding-left: 30px;
   font-family: Avenir;
 }
+
+.article {
+  margin-left: 40px;
+
+  .figure {
+    position: relative;
+    top: -35px;
+    left: 160px;
+  }
+
+  .article_comment {
+    display: flex;
+    position: relative;
+    top: -50px;
+    left: -35px;
+    margin-top: 30px;
+  
+    .comment_user_avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 100%;
+      cursor: pointer;
+      position: relative;
+      top: -9px;
+      left: 10px;
+      margin-right: 10px;
+    }
+    
+    p {
+      font-size: 12px;
+      width: 300px;
+      height: 40px;
+      position: relative;
+      top: -7px;
+      right: -10px;
+      word-wrap: break-word;
+    }
+
+    .comment_content {
+      margin-top: 7px;
+    }
+  }
+
+  .comment_mark {
+    position: relative;
+    top: -58px;
+    left: 340px;
+  }
+
+}
+
+
+
+

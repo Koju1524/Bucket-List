@@ -1,8 +1,12 @@
 import $ from 'jquery'
-import axios from 'axios'
-import { csrfToken } from 'rails-ujs'
+import axios from 'modules/axios'
 
-axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
+import {
+  listenInactiveHeartEvent,
+  listenActiveHeartEvent
+} from 'modules/handle_heart'
+
+
 
 const handleHeardDisplay = (hasLiked) => {
   if (hasLiked) {
@@ -12,7 +16,12 @@ const handleHeardDisplay = (hasLiked) => {
   }
 }
 
-
+const handleCommentForm = () => {
+  $('.show-comment-form').on('click', () => {
+    $('.show-comment-form').addClass('hidden')
+    $('.comment-text-area').removeClass('hidden')
+  })
+}
 
 document.addEventListener('DOMContentLoaded',  () => {
   const dataset = $('#article-show').data()
@@ -24,30 +33,7 @@ document.addEventListener('DOMContentLoaded',  () => {
       handleHeardDisplay(hasLiked)
     })
 
-  $('.inactive-heart').on('click', () => {
-    axios.post(`/articles/${articleId}/like`)
-      .then((response) => {
-        if (response.data.status === 'ok' )
-          $('.active-heart').removeClass('hidden')
-          $('.inactive-heart').addClass('hidden')
-      }) 
-      .catch((e) => {
-        window.alert('Error')
-        console.log(e)
-      })
-  })
-
-  $('.active-heart').on('click', () => {
-    axios.delete(`/articles/${articleId}/like`)
-      .then((response) => {
-        if (response.data.status === 'ok' )
-          $('.active-heart').addClass('hidden')
-          $('.inactive-heart').removeClass('hidden')
-      }) 
-      .catch((e) => {
-        window.alert('Error')
-        console.log(e)
-      })
-  })
-
+    listenInactiveHeartEvent(articleId),
+    listenActiveHeartEvent(articleId)
+  
 })
