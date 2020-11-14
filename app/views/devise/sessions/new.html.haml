@@ -8,9 +8,8 @@
       = f.label :password, '・Password', class:'text'
       %br/
       = f.password_field :password, autocomplete: "current-password", class: 'box'
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me, class: 'check_box'
-        = f.label :remember_me, class: 'check_letter'
+    .links 
+      = render 'devise/shared/links', {style:'text-decoration:none;color:black;'}
+
     .actions
       = f.submit "Login", class: 'btn-primary'

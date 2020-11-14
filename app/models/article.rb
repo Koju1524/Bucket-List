@@ -36,5 +36,7 @@ class Article < ApplicationRecord
   has_one_attached :picture
 
   belongs_to :user
+
+  default_scope -> { order(created_at: :desc) }
   
 end

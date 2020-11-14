@@ -1,0 +1,33 @@
+.follow_info {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+  border-bottom: solid 1px rgb(233, 232, 229);
+}
+
+.follow_image {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 0 40px 20px 20px;
+}
+
+.follow_name {
+  font-size: 17px;
+  position: relative;
+  top: 7px;
+  width: 80px;
+  height: 35px;
+  word-wrap: break-word;
+}
+
+.follow_bio {
+  font-size: 14px;
+  position: relative;
+  top: 7px;
+  right: -50px;
+  width: 240px;
+  height: 40px;
+  word-wrap: break-word;
+}

@@ -1,0 +1,8 @@
+- @followers.each do |follower|
+  .follow_info
+    .follow_avatar
+      = image_tag follower.profile.avatar, class:'follow_image'
+    .follow_name
+      = follower.user_name
+    .follow_bio
+      = follower&.profile&.bio
