@@ -1,10 +1,10 @@
-.follower_info {
+.follow_info {
   display: flex;
   margin: 20px 0;
   border-bottom: solid 1px rgb(233, 232, 229);
 }
 
-.follower_image {
+.follow_image {
   width: 42px;
   height: 42px;
   border-radius: 100%;
@@ -12,14 +12,14 @@
   margin: 0 40px 20px 20px;
 }
 
-.follower_name {
+.follow_name {
   font-size: 20px;
   margin-right: 100px;
   position: relative;
   top: 3px;
 }
 
-.follower_bio {
+.follow_bio {
   font-size: 14px;
   position: relative;
   top: 7px;

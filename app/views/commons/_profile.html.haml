@@ -31,7 +31,7 @@
   .profilePage_user_info_title
     %p Posts
     %p Achieved 
-    %p Following
+    %p= link_to 'Following', account_following_path(user), {:style=>'text-decoration:none;color:black;'}
     %p= link_to 'Follower', account_follower_path(user), {:style=>'text-decoration:none;color:black;'}
 
   - user.articles.each do |article|
