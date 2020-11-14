@@ -32,7 +32,7 @@
     %p Posts
     %p Achieved 
     %p Following
-    %p Follower
+    %p= link_to 'Follower', account_follower_path(user), {:style=>'text-decoration:none;color:black;'}
 
   - user.articles.each do |article|
     = render 'commons/article', article: article
