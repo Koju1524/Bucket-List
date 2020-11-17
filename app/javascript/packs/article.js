@@ -16,12 +16,6 @@ const handleHeardDisplay = (hasLiked) => {
   }
 }
 
-const handleCommentForm = () => {
-  $('.show-comment-form').on('click', () => {
-    $('.show-comment-form').addClass('hidden')
-    $('.comment-text-area').removeClass('hidden')
-  })
-}
 
 document.addEventListener('DOMContentLoaded',  () => {
   const dataset = $('#article-show').data()
