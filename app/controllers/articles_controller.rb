@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
   def destroy
     article = current_user.articles.find(params[:id])
     article.destroy!
-    redirect_to root_path, notice: ' Deleted Bucketn List'
+    redirect_to root_path, notice: 'Deleted Bucketn List'
   end
 
   private
