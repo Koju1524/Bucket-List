@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to article_path(@article),  notice: 'Successful Comment!!'
     else
+      flash.now[:error] = 'Failed Comment'
       render :new
     end
   end
@@ -29,6 +30,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to article_path(@article), notice: 'Edit Comment!!'
     else
+      flash.now[:error] = 'Failed Edit'
       render :edit
     end
   end

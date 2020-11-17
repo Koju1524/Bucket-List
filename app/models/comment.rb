@@ -19,7 +19,7 @@ class Comment < ApplicationRecord
   belongs_to :article
   belongs_to :user
 
-  validates :content, presence: true
+  validates :content, length: { minimum: 2, maximum: 100 }
 
   default_scope -> { order(created_at: :desc) }
 
