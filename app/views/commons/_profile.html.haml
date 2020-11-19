@@ -5,16 +5,13 @@
     .profilePage_user_name
       = user.user_name
     .profilePage_user_actionButton
-      - if user == current_user 
+      - if user_signed_in? && user == current_user 
         = link_to 'Profile Edit', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
       - else 
-        .follow_btn_info
         - if current_user&.has_followed?(user)
-          .follow_btn
-            = link_to 'Unfollow', account_unfollows_path(user), { method: 'post', class: 'profile-edit-btn', remote: true, :style=>'text-decoration:none;'}
+          = render 'accounts/unfollow'
         - else 
-          .follow_btn#follow-show{id: @user.id}
-            = link_to 'Follow', account_follows_path(user), { method: 'post', class: 'profile-edit-btn', remote: true, :style=>'text-decoration:none;'}
+          = render 'accounts/follow'
   .profilePage_user_private_info
     .profilePage_user_birthday
       %i.fas.fa-birthday-cake
