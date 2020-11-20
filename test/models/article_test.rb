@@ -3,8 +3,11 @@
 # Table name: articles
 #
 #  id               :integer          not null, primary key
+#  achieved_day     :date
 #  achievement_flag :integer          not null
+#  advice           :text
 #  expiration       :date             not null
+#  feeling          :text
 #  necessary_stuff  :text
 #  reason           :text             not null
 #  title            :string           not null
