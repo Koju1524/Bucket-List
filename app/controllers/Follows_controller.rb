@@ -3,6 +3,7 @@ class FollowsController < ApplicationController
   
   def create
     current_user.follow!(params[:account_id])
+    @user = User.find params[:account_id]
   end
 
 end
