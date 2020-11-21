@@ -14,7 +14,7 @@
   font-family: Avenir;
 }
 
-.profile-edit-btn {
+.follow_btn {
   background-color:rgb(45, 186, 253);
   width: 100px;
   text-align: center;
@@ -27,6 +27,7 @@
   left: 200px;
   top: 10px;
 }
+
 
 .btn-secondary {
   background-color:rgb(45, 186, 253);
@@ -54,4 +55,18 @@
   position: relative;
   top: -40px;
   left: 300px;
+}
+
+.profile-edit-btn {
+  background-color:rgb(45, 186, 253);
+  width: 140px;
+  text-align: center;
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 7px;
+  font-family: Avenir;
+  position: relative;
+  top: 12px;
+  left: 200px;
 }
