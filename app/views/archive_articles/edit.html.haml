@@ -1,0 +1,27 @@
+.container
+  %ul
+    - @archive_article.errors.full_messages.each do |message|
+      %li= message
+
+  = form_with(model: @aarchive_rticle, url: archive_article_path(@article), method: 'put', local: true) do |f|
+    %div
+      = f.label :title, '・My Bucket List', class: 'title'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :feeling, '・Feeling', class: 'title'
+    %div
+      = f.text_area :feeling, class: 'text'
+    %div
+      = f.label :advice, '・Advice', class: 'title'
+    %div
+      = f.rich_text_area :advice, class: 'text'
+    %div
+      = f.label :achieved_day, 'Achieved day ', class: 'title'
+    %div
+      = f.date_field :achieved_day, class: 'text'
+    %div
+      = f.label :video, '・Video & Picture ', class: 'title'
+    %div
+      = f.file_field :video, class: 'text'
+    = f.submit 'Submit', class: 'btn-primary'
