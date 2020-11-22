@@ -19,3 +19,15 @@ require("trix")
 require("@rails/actiontext")
 
 
+$(function() {
+
+  $('.active').on('click', function() {
+    $('.active').addClass('active');
+    $('.inactive').removeClass('active');
+  })
+  
+  $('.inactive').on('click', () => {
+    $('.active').removeClass('active');
+    $('.inactive').addClass('active');
+  })
+})

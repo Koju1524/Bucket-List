@@ -6,7 +6,7 @@ RSpec.describe Comment, type: :model do
 
   context 'contentが入力されている場合' do
     let!(:comment) { build(:comment, user: user, article: article) }
-  
+
       it 'commentがsaveできる' do
         expect(comment).to be_valid
       end

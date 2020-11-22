@@ -28,7 +28,7 @@ class Article < ApplicationRecord
   validates :reason, length: { minimum: 2, maximum: 150 }
 
   validates :necessary_stuff, presence: true
-  
+
   validates :expiration, presence: true
 
   has_many :comments, dependent: :destroy
@@ -38,5 +38,5 @@ class Article < ApplicationRecord
   belongs_to :user
 
   default_scope -> { order(created_at: :desc) }
-  
+
 end

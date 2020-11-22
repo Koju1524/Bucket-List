@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:user_name, :email, :password, :password_confirmation) }
-  end  
+  end
 
   def current_user
     ActiveDecorator::Decorator.instance.decorate(super) if super.present?
     super
   end
-  
+
 end

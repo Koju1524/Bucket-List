@@ -30,7 +30,6 @@ class User < ApplicationRecord
   has_many :favorite_articles, through: :likes, source: :article
   has_one :profile, dependent: :destroy
 
-
   has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
   has_many :followings, through: :following_relationships, source: :following
 
@@ -38,7 +37,7 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships, source: :follower
 
   delegate :location, :birthday, to: :profile, allow_nil: true
-  
+
   validates_uniqueness_of :user_name
   validates_presence_of :user_name
 
@@ -68,7 +67,7 @@ class User < ApplicationRecord
   def prepare_profile
     profile || build_profile
   end
-  
+
   private
   def get_user_id(user)
     if user.is_a?(User)
