@@ -6,7 +6,8 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-
+require("jquery")
+require("packs/tab.js")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -17,17 +18,3 @@ require("channels")
 
 require("trix")
 require("@rails/actiontext")
-
-
-$(function() {
-
-  $('.active').on('click', function() {
-    $('.active').addClass('active');
-    $('.inactive').removeClass('active');
-  })
-  
-  $('.inactive').on('click', () => {
-    $('.active').removeClass('active');
-    $('.inactive').addClass('active');
-  })
-})
