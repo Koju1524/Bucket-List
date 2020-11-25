@@ -5,9 +5,9 @@ module UserDecorator
   def avatar_image
     if profile&.avatar&.attached?
       profile.avatar
-    else 
+    else
       'smile.png'
-    end  
+    end
   end
-  
+
 end

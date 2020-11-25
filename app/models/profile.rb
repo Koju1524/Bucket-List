@@ -23,5 +23,5 @@ class Profile < ApplicationRecord
 
   validates :location, presence: true
   validates :location, length: { minimum: 2, maximum: 20}
-  
+
 end

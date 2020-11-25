@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  
+
   def index
     @articles = Article.all
   end
@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
     if @article.save
       redirect_to article_path(@article), notice: 'Successful Submit !!'
-    else 
+    else
       flash.now[:error] = 'Failed Submit'
       render :new
     end
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find(params[:id])
     if @article.update(article_params)
       redirect_to article_path(@article), notice: 'Successful Edit !!'
-    else 
+    else
       flash.now[:error] = 'Failed Edit'
       render :edit
     end
@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
   private
     def article_params
         params.require(:article).permit(
-          :title, 
+          :title,
           :reason,
           :necessary_stuff,
           :expiration,

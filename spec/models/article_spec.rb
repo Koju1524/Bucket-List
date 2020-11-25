@@ -5,7 +5,6 @@ RSpec.describe Article, type: :model do
 
   context 'title,reason,necessary_stuff,expiration,achievement_flagが入力されている場合' do
     let!(:article) { build(:article, user: user) }
-      
 
     it 'articleが保存できる' do
       expect(article).to be_valid
