@@ -1,4 +1,4 @@
-class Archive_articlesController < ApplicationController
+class ArchiveArticlesController < ApplicationController
 
   def edit
     @archive_article = current_user.archive_article.new

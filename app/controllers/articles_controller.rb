@@ -26,8 +26,8 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = current_user.articles.find(params[:id])
-    if @article.achievement_flag == 
-      redirect_to '/archive_articles/id/edit'
+    if @article.achievement_flag == 1
+      redirect_to "/archive_article/#{@article_id}/edit"
     end 
   end
 
