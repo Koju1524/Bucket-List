@@ -26,15 +26,17 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = current_user.articles.find(params[:id])
-    if @article.achievement_flag == 1
-      redirect_to "/archive_article/#{@article_id}/edit"
-    end 
   end
 
   def update
     @article = current_user.articles.find(params[:id])
     if @article.update(article_params)
-      redirect_to article_path(@article), notice: 'Successful Edit !!'
+      if @article.achievement_flag == "Achievement"
+        
+        redirect_to "/archive_article/#{@article.id}/edit"
+      else
+        redirect_to article_path(@article), notice: 'Successful Edit !!'
+      end
     else 
       flash.now[:error] = 'Failed Edit'
       render :edit

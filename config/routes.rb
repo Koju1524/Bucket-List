@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: 'articles#index'
-  get '/archive_article/' => 'archive_article#edit'
-  get '/archive_article/:article_id/edit' => 'archive_article#edit'
-  put '/archive_article/:article_id/' => 'archive_article#update'
+  get '/archive_articles/' => 'archive_articles#edit'
+  get '/archive_articles/:article_id/edit' => 'archive_articles#edit'
+  put '/archive_articles/:article_id/' => 'archive_articles#update'
 
   resource :timeline, only: [:show]
   
