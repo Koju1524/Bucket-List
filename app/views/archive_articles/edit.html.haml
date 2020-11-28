@@ -1,23 +1,19 @@
 .container
-  %ul
-    - @archive_article.errors.full_messages.each do |message|
-      %li= message
-
-  = form_with(model: @aarchive_rticle, url: archive_article_path(@article), method: 'put', local: true) do |f|
+  = form_with(model: @archive_article, url: archive_articles_path(@article), method: 'put', local: true) do |f|
     %div
       = f.label :title, '・My Bucket List', class: 'title'
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :feeling, '・Feeling', class: 'title'
+      = f.label :feeling, '・Feeling (気持ち)', class: 'title'
     %div
       = f.text_area :feeling, class: 'text'
     %div
-      = f.label :advice, '・Advice', class: 'title'
+      = f.label :advice, '・Advice (アドバイス)', class: 'title'
     %div
       = f.rich_text_area :advice, class: 'text'
     %div
-      = f.label :achieved_day, 'Achieved day ', class: 'title'
+      = f.label :achieved_day, '・Achieved day (達成した日) ', class: 'title'
     %div
       = f.date_field :achieved_day, class: 'text'
     %div
