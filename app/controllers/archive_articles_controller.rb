@@ -1,7 +1,8 @@
 class ArchiveArticlesController < ApplicationController
 
   def edit
-    @archive_article = current_user.archive_article.new
+    articles = current_user.articles.where(achievement_flag: 1)
+    @archive_article = current_user.articles
   end
 
 
@@ -13,7 +14,7 @@ class ArchiveArticlesController < ApplicationController
         :advice,
         :achieved_day,
         :video,
-        :picture,
+        :pictures,
       )
   end
 end
