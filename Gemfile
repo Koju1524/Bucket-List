@@ -33,6 +33,10 @@ gem 'faker'
 gem 'bootstrap'
 gem 'active_decorator'
 gem 'active_model_serializers'
+gem 'carrierwave'
+gem 'mini_magick'
+
+
 
 
 # Use Active Storage variant
