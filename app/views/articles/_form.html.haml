@@ -21,10 +21,6 @@
     %div
       = f.date_field :expiration, class: 'text'
     %div
-      = f.label :picture, '・Imagination Picture (写真)', class: 'title'
-    %div
-      = f.file_field :picture, class: 'text'
-    %div
       = f.label :achievement_flag, '・Achievement Flag (達成フラグ)', class: 'title'
     %div
       = f.select :achievement_flag, Article.achievement_flags.keys, {}, { class: 'text'}

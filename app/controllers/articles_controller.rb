@@ -55,7 +55,6 @@ class ArticlesController < ApplicationController
           :reason,
           :necessary_stuff,
           :expiration,
-          :picture,
           :achievement_flag
         )
     end
