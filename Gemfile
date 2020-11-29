@@ -35,6 +35,7 @@ gem 'active_decorator'
 gem 'active_model_serializers'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'jquery-rails'
 
 
 
