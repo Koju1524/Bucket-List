@@ -31,14 +31,12 @@
         ・Expiration
       %div.content
         Until #{@article.expiration}
-      %div.bucket_list_image
-        = image_tag @article.picture, class: 'bucket_list_image'
     .card_iteam
       - if user_signed_in?
         .card_heart.hidden.active-heart
-          = image_tag 'heart.png', class: 'heart_mark'
+          = image_tag 'heart.png', class: 'heart_mark1'
         .card_heart.hidden.inactive-heart
-          = image_tag 'heart1.png', class: 'heart_mark'
+          = image_tag 'heart1.png', class: 'heart_mark1'
       
 = javascript_pack_tag 'article'   
 
