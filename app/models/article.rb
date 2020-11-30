@@ -3,11 +3,8 @@
 # Table name: articles
 #
 #  id               :integer          not null, primary key
-#  achieved_day     :date
 #  achievement_flag :integer          not null
-#  advice           :text
 #  expiration       :date             not null
-#  feeling          :text
 #  necessary_stuff  :text
 #  reason           :text             not null
 #  title            :string           not null
@@ -23,6 +20,7 @@ class Article < ApplicationRecord
 
   enum achievement_flag: { Unachievement: 0, Achievement: 1 }
   has_rich_text :necessary_stuff
+  has_rich_text :advice
 
   validates :title, presence: true
   validates :title, length: { minimum: 2, maximum: 100 }
@@ -31,12 +29,16 @@ class Article < ApplicationRecord
   validates :reason, length: { minimum: 2, maximum: 150 }
 
   validates :necessary_stuff, presence: true
-  
   validates :expiration, presence: true
+
+  # validates :feeling, presence: true
+  # validates :advice, presence: true
+  # validates :achieved_day, presence: true
 
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_one_attached :picture
+
+  has_many_attached :pictures
 
   belongs_to :user
 

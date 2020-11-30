@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_28_060945) do
+ActiveRecord::Schema.define(version: 2020_11_30_060412) do
+
+  create_table "achieved_articles", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title", null: false
+    t.text "impression", null: false
+    t.text "advice", null: false
+    t.date "achieved_day", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_achieved_articles_on_user_id"
+  end
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -52,9 +63,6 @@ ActiveRecord::Schema.define(version: 2020_11_28_060945) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "necessary_stuff"
-    t.text "feeling"
-    t.text "advice"
-    t.date "achieved_day"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
