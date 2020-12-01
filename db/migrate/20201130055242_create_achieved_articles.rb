@@ -3,9 +3,9 @@ class CreateAchievedArticles < ActiveRecord::Migration[6.0]
     create_table :achieved_articles do |t|
       t.references :user, null: false
       t.string :title, null: false
-      t.text :impression, null: false
-      t.text :advice, null: false
-      t.date :achieved_day, null: false
+      t.text :impression
+      t.text :advice
+      t.date :achieved_day
       t.timestamps
     end
   end

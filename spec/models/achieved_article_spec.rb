@@ -3,9 +3,9 @@
 # Table name: achieved_articles
 #
 #  id           :integer          not null, primary key
-#  achieved_day :date             not null
-#  advice       :text             not null
-#  impression   :text             not null
+#  achieved_day :date
+#  advice       :text
+#  impression   :text
 #  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
