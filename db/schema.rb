@@ -14,12 +14,14 @@ ActiveRecord::Schema.define(version: 2020_11_30_055242) do
 
   create_table "achieved_articles", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.integer "article_id", null: false
     t.string "title", null: false
     t.text "impression"
     t.text "advice"
     t.date "achieved_day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_achieved_articles_on_article_id"
     t.index ["user_id"], name: "index_achieved_articles_on_user_id"
   end
 

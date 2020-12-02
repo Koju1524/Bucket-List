@@ -9,21 +9,21 @@
 #  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  article_id   :integer          not null
 #  user_id      :integer          not null
 #
 # Indexes
 #
-#  index_achieved_articles_on_user_id  (user_id)
+#  index_achieved_articles_on_article_id  (article_id)
+#  index_achieved_articles_on_user_id     (user_id)
 #
 class AchievedArticle < ApplicationRecord
 
   belongs_to :user
 
-  # validates :impression, presence: true
-  # validates :advice, presence: true
-  # validates :achieved_day, presence: true
-
   has_rich_text :advice
+  
+  has_one :achieved_article
 
   has_many_attached :pictures
   

@@ -9,11 +9,13 @@
 #  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  article_id   :integer          not null
 #  user_id      :integer          not null
 #
 # Indexes
 #
-#  index_achieved_articles_on_user_id  (user_id)
+#  index_achieved_articles_on_article_id  (article_id)
+#  index_achieved_articles_on_user_id     (user_id)
 #
 require 'rails_helper'
 
