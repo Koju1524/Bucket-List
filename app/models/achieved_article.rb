@@ -23,7 +23,7 @@ class AchievedArticle < ApplicationRecord
 
   has_rich_text :advice
   
-  has_one :achieved_article
+  has_one :article
 
   has_many_attached :pictures
   
