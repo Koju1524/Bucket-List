@@ -4,18 +4,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: 'articles#index'
-  get '/archive_articles/' => 'archive_articles#edit'
-  get '/archive_articles/:article_id/edit' => 'archive_articles#edit'
-  put '/archive_articles/:article_id/' => 'archive_articles#update'
 
   resource :timeline, only: [:show]
   
   resources :articles do
+    resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit]
     resource :like, only: [:show, :create, :destroy]
     resources :comments, only: [:index, :new, :create, :update, :edit, :destroy]
   end
-
-
 
   resource :profile, only: [:show, :edit, :update] 
 
