@@ -20,7 +20,6 @@ class Article < ApplicationRecord
 
   enum achievement_flag: { Unachievement: 0, Achievement: 1 }
   has_rich_text :necessary_stuff
-  has_rich_text :advice
 
   validates :title, presence: true
   validates :title, length: { minimum: 2, maximum: 100 }
@@ -31,14 +30,9 @@ class Article < ApplicationRecord
   validates :necessary_stuff, presence: true
   validates :expiration, presence: true
 
-  # validates :feeling, presence: true
-  # validates :advice, presence: true
-  # validates :achieved_day, presence: true
-
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-
-  has_many_attached :pictures
+  has_one :achieved_article, dependent: :destroy
 
   belongs_to :user
 
