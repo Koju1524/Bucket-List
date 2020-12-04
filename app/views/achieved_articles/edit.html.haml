@@ -1,23 +1,23 @@
 .container
-  = form_with(model: @archive_article, url: archive_articles_path(@article), method: 'put', local: true) do |f|
+  = form_with(model: @achieved_article, url: article_achieved_article_path(@article, @achieved_article), method: 'put', local: true) do |f|
     %div
       = f.label :title, '・My Bucket List', class: 'title'
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :feeling, '・Feeling (気持ち)', class: 'title'
+      = f.label :impression, '・Impression(感想)', class: 'title'
     %div
-      = f.text_area :feeling, class: 'text'
+      = f.text_area :impression, class: 'text'
     %div
       = f.label :advice, '・Advice (アドバイス)', class: 'title'
     %div
-      = f.rich_text_area :advice, class: 'text'
+      = f.rich_text_area  :advice, class: 'text'
     %div
       = f.label :achieved_day, '・Achieved day (達成した日) ', class: 'title'
     %div
       = f.date_field :achieved_day, class: 'text'
     %div
-      = f.label :video, '・Video & Picture ', class: 'title'
+      = f.label :pictures, '・Pictures', class: 'title'
     %div
-      = f.file_field :video, class: 'text'
+      = f.file_field :pictures, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'

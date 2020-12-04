@@ -1,0 +1,60 @@
+.card
+  .user_info
+    .user_avatar
+      = link_to account_path(@achieved_article.user) do
+        = image_tag @achieved_article.user.avatar_image, class: 'article_user_avatar' 
+    .user_name
+      = @achieved_article.user.user_name 
+    .post_time
+      = date_format(@achieved_article.created_at)
+    - if user_signed_in?
+      .dropdown
+        = image_tag 'shape.png', class: 'dropbtn'
+        .dropdown-content.mini1
+          = link_to 'Edit', edit_article_achieved_article_path(@achieved_article.article_id, @achieved_article), {:style=>'text-decoration:none;'}
+  .card_bucket_list
+    .card_detail
+      %div.title
+        ・My Bucket List 
+      %div.content
+        = @achieved_article.title
+      %div.title
+        ・Impression
+      %div.content
+        = @achieved_article.impression
+      %div.title
+        ・Advice
+      %div.content
+        = @achieved_article.advice
+      %div.title
+        ・Achieved Day
+      %div.content
+        = @achieved_article.achieved_day 
+      %div.bucket_list_image
+        = image_tag @achieved_article.pictures[0], class: 'bucket_list_image'
+    .card_iteam
+      .card_heart
+        = image_tag 'heart1.png', class: 'heart_mark'
+      
+= javascript_pack_tag 'article'   
+
+
+.article
+  %h4 Comments
+  .comment_btn
+    %p.figure= 5
+    .btn-secondary
+      = link_to 'Comment Add', {}, {:style=>'text-decoration:none;color:black;'}
+
+    .comments-container
+      .article_comment
+        .article_comment_detail
+          = image_tag 'beach.jpg', class:'comment_user_avatar'
+        .article_comment_detail
+          %p.commen_content
+            Ggggg
+            .dropdown
+              = image_tag 'shape.png', class:'comment_mark'
+              .dropdown-content.mini2
+                = link_to 'Edit', {}, {:style=>'text-decoration:none;'}
+                = link_to 'Delete', {}, { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}
