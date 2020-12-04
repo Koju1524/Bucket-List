@@ -32,6 +32,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find(params[:id])
     if @article.update(article_params)
       if @article.achievement_flag == "Achievement"
+<<<<<<< HEAD
         @article = Article.find(params[:id])
         @achieved_article = AchievedArticle.new
         
