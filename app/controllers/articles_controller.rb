@@ -31,7 +31,31 @@ class ArticlesController < ApplicationController
   def update
     @article = current_user.articles.find(params[:id])
     if @article.update(article_params)
-      redirect_to article_path(@article), notice: 'Successful Edit !!'
+
+      if @article.achievement_flag == "Achievement"
+
+        @article = Article.find(params[:id])
+        @achieved_article = AchievedArticle.new
+        
+        @achieved_article.title = @article.title
+        @achieved_article.user_id = @article.user_id
+        @achieved_article.article_id = @article.id
+    
+        if AchievedArticle.where(user_id: @article.user_id, article_id: @article.id).size > 0
+          flash.now[:error] = 'Plase edit from achieved_article'
+          render :edit
+        else
+          if @achieved_article.save
+            redirect_to edit_article_achieved_article_path(@article, @achieved_article)
+          else
+            flash.now[:error] = 'Failed Submit'
+            render :edit
+          end
+        end
+      else
+        redirect_to article_path(@article), notice: 'Successful Edit !!'
+      end
+
     else
       flash.now[:error] = 'Failed Edit'
       render :edit
@@ -51,7 +75,6 @@ class ArticlesController < ApplicationController
           :reason,
           :necessary_stuff,
           :expiration,
-          :picture,
           :achievement_flag
         )
     end

@@ -33,6 +33,13 @@ gem 'erb2haml'
 gem 'faker'
 gem 'hamlit'
 gem 'rubocop-rails'
+gem 'faker'
+gem 'bootstrap'
+gem 'active_decorator'
+gem 'active_model_serializers'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'

@@ -33,7 +33,7 @@ class Article < ApplicationRecord
 
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_one_attached :picture
+  has_one :achieved_article, dependent: :destroy
 
   belongs_to :user
 

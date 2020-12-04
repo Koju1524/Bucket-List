@@ -1,0 +1,25 @@
+- @achieved_articles.each do |achieved_article| 
+  = link_to article_achieved_article_path(@article, achieved_article), {:style=>'color:black;text-decoration:none;'} do
+    .card
+      .user_info
+        .user_avatar
+          = image_tag achieved_article.user.avatar_image, class: 'article_user_avatar'
+        .user_name
+          = achieved_article.user.user_name
+        .post_time
+          = date_format(achieved_article.created_at)
+      .card_bucket_list
+        .card_title
+          %div.title
+            ・My Bucket List
+          %div.bucket_list
+            = achieved_article.title
+          %div.bucket_list_image
+            = image_tag achieved_article.pictures[0], class: 'bucket_list_image'
+        .card_iteam
+          .card_heart
+            = image_tag 'heart1.png', class: 'heart_mark'
+            %span.number= 0
+          .card_comment
+            = image_tag 'comment.png', class: 'comment_mark'
+            %span.number= 0

@@ -25,12 +25,12 @@
     = user.profile&.bio
   .profilePage_user_info_figures
     %p.posts= @user&.articles&.count || current_user.articles.count
-    %p.achieved  9
+    %p.achieved= @user&.achieved_articles&.count || current_user.achieved_articles.count
     %p.following= @user&.followings&.count || current_user.followings.count
     %p.follower= @user&.followers&.count || current_user.followers.count
   .profilePage_user_info_title
-    %p Posts
-    %p Achieved 
+    %p= link_to 'Posts', {}, {:style=>'text-decoration:none;color:black;'}
+    %p= link_to 'Achieved', {}, {:style=>'text-decoration:none;color:black;'} 
     %p= link_to 'Following', account_following_path(user), {:style=>'text-decoration:none;color:black;'}
     %p= link_to 'Follower', account_follower_path(user), {:style=>'text-decoration:none;color:black;'}
 
