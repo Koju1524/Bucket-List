@@ -5,5 +5,5 @@ class FollowingsController < ApplicationController
     user = User.find(params[:account_id])
     @followings = user.followings
   end
-  
+
 end

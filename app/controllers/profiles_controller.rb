@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
   private
   def profile_paramas
     params.require(:profile).permit(
-          :bio, 
+          :bio,
           :location,
           :birthday,
           :avatar
