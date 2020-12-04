@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   root to: 'articles#index'
 
-  resource :timeline, only: [:show]
+  resource :following_articles, only: [:show]
+  resource :following_achieved_articles, only: [:show]
 
   resources :articles do
     resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit]
