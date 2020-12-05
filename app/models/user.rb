@@ -46,6 +46,10 @@ class User < ApplicationRecord
     articles.exists?(id: article.id)
   end
 
+  def has_written?(achieved_article)
+    achieved_articles.exists?(id: achieved_article.id)
+  end
+
   def has_liked?(article)
     likes.exists?(article_id: article.id)
   end
