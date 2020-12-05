@@ -1,0 +1,6 @@
+.container{style:'padding-right:1px;padding-left:1px;'}
+  = render 'commons/tabs'
+
+  -@achieved_articles.each do |achieved_article|
+    -@article = Article.find(achieved_article.article_id)
+    = render 'commons/achieved_article', article: @article, achieved_article: achieved_article
