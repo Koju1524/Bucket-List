@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   resource :following_achieved_articles, only: [:show]
 
   resources :articles do
-    resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit]
     resource :like, only: [:show, :create, :destroy]
     resources :comments, only: [:index, :new, :create, :update, :edit, :destroy]
+    resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit]
   end
 
   resource :profile, only: [:show, :edit, :update]

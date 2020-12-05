@@ -34,9 +34,7 @@ class ArticlesController < ApplicationController
 
       if @article.achievement_flag == "Achievement"
 
-        @article = Article.find(params[:id])
         @achieved_article = AchievedArticle.new
-        
         @achieved_article.title = @article.title
         @achieved_article.user_id = @article.user_id
         @achieved_article.article_id = @article.id
