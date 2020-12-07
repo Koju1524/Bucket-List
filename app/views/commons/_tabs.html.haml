@@ -1,5 +1,5 @@
-.tabs 
-  .tabs_item.active
-    = link_to 'Bucket List', timeline_path, {remote: true, :style=>'text-decoration:none; color:black'}
-  .tabs_item.inactive
-    = link_to 'Achieved Bucket List', root_path, {remote: true, :style=>'text-decoration:none; color:black; font-weight:450;'}
+.tabs
+  .tabs_item{class: "#{add_active_class(following_articles_path)}"}
+    = link_to 'Bucket List', following_articles_path, {:style=>'text-decoration:none; color:black; display: block;'}
+  .tabs_item{class: "#{add_active_class(following_achieved_articles_path)}"}
+    = link_to 'Achieved Bucket List', following_achieved_articles_path, {:style=>'text-decoration:none; color:black; font-weight:450;'}
