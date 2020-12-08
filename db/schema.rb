@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_055242) do
+ActiveRecord::Schema.define(version: 2020_12_07_115837) do
 
   create_table "achieved_articles", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 2020_11_30_055242) do
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "achieved_article_id"
+    t.index ["achieved_article_id"], name: "index_comments_on_achieved_article_id"
     t.index ["article_id"], name: "index_comments_on_article_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -128,6 +130,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_055242) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "achieved_articles"
   add_foreign_key "relationships", "users", column: "follower_id"
   add_foreign_key "relationships", "users", column: "following_id"
 end

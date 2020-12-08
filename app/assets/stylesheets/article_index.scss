@@ -61,7 +61,7 @@
 .card_iteam {
   display: flex;
   position: relative;
-  left: 20px;
+  left: 350px;
   top: 18px;
   margin-top: 7px;
 
@@ -73,7 +73,6 @@
 
   .number { 
     position: relative;
-    right: -1px;
     top: 1px;
   }
   
@@ -82,4 +81,5 @@
     height: 22px;
     margin: 0 5px 0 9px;
   }
+  
 }

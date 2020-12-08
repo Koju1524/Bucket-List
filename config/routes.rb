@@ -10,8 +10,9 @@ Rails.application.routes.draw do
 
   resources :articles do
     resource :like, only: [:show, :create, :destroy]
-    resources :comments, only: [:index, :new, :create, :update, :edit, :destroy]
-    resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit]
+    resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit] do
+      resources :comments, only: [:index, :new, :create, :update, :edit, :destroy]
+    end
   end
 
   resource :profile, only: [:show, :edit, :update]

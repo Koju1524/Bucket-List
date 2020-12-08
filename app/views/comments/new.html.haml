@@ -3,9 +3,9 @@
     - @comment.errors.full_messages.each do |message|
       %li= message
 
-= form_with(model: @comment, url: article_comments_path(@article), method: 'post', local: true) do |f|
+= form_with(model: @comment, url: article_achieved_article_comments_path(@article, @achieved_article), method: 'post',local: true) do |f|
   %div
-    = f.label :cotent, '・Comment', class: 'title'
+    = f.label :content, '・Comment', class: 'title'
   %div
     = f.text_area :content, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'
