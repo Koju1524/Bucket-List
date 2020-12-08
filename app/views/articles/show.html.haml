@@ -39,27 +39,3 @@
           = image_tag 'heart1.png', class: 'heart_mark1'
       
 = javascript_pack_tag 'article'   
-
-
-.article
-  %h4 Comments
-  .comment_btn
-    %p.figure= @article.comments.count
-    .btn-secondary
-      = link_to 'Comment Add', new_article_comment_path(@article, @comment), {:style=>'text-decoration:none;color:black;'}
-
-    .comments-container
-      - @comments.each do |comment|
-        .article_comment
-          .article_comment_detail
-            = image_tag comment.user.profile.avatar, class:'comment_user_avatar'
-          .article_comment_detail
-            %p.commen_content= comment.content 
-            - if comment.user == current_user
-              .dropdown
-                = image_tag 'shape.png', class:'comment_mark'
-                .dropdown-content.mini2
-                  = link_to 'Edit', edit_article_comment_path(@article, comment.id), {:style=>'text-decoration:none;'}
-                  = link_to 'Delete', article_comment_path(@article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}
-
-      
