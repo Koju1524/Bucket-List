@@ -33,8 +33,9 @@
       %div.bucket_list_image
         = image_tag @achieved_article.pictures[0], class: 'bucket_list_image'
     .card_iteam
-      .card_heart
-        = image_tag 'heart1.png', class: 'heart_mark'
+      .card_thumb
+        = image_tag 'thumbs.png', class: 'thumbs_up'
+        = image_tag 'black_thumbs.png', class: 'thumbs_up_0'
       
 = javascript_pack_tag 'article'   
 
