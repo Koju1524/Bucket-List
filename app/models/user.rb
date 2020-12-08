@@ -28,6 +28,7 @@ class User < ApplicationRecord
   has_many :achieved_articles, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :thumbs_ups, dependent: :destroy
   has_many :favorite_articles, through: :likes, source: :article
   has_one :profile, dependent: :destroy
 

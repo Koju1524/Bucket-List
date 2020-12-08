@@ -1,0 +1,3 @@
+class ThumbsUpsController < ApplicationController
+
+end

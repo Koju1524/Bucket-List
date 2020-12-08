@@ -26,6 +26,7 @@ class AchievedArticle < ApplicationRecord
 
   has_many_attached :pictures
   has_many :comments
+  has_many :thumbs_ups
   
   default_scope -> { order(created_at: :desc) }
 
