@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_115837) do
+ActiveRecord::Schema.define(version: 2020_12_08_095526) do
 
   create_table "achieved_articles", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -113,6 +113,17 @@ ActiveRecord::Schema.define(version: 2020_12_07_115837) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
     t.index ["following_id"], name: "index_relationships_on_following_id"
+  end
+
+  create_table "thumbs_ups", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "article_id", null: false
+    t.integer "achieved_articles_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["achieved_articles_id"], name: "index_thumbs_ups_on_achieved_articles_id"
+    t.index ["article_id"], name: "index_thumbs_ups_on_article_id"
+    t.index ["user_id"], name: "index_thumbs_ups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
