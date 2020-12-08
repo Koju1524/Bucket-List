@@ -22,10 +22,11 @@
 #
 class Comment < ApplicationRecord
 
-  belongs_to :article
   belongs_to :user
+  belongs_to :article
+  belongs_to :achieved_article
 
-  validates :content, length: { minimum: 2, maximum: 100 }
+  validates :content, length: { minimum: 3, maximum: 100 }
 
   default_scope -> { order(created_at: :desc) }
 
