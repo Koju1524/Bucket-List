@@ -3,7 +3,7 @@ class CreateThumbsUps < ActiveRecord::Migration[6.0]
     create_table :thumbs_ups do |t|
       t.references :user, null: false
       t.references :article, null: false
-      t.references :achieved_articles, null: false
+      t.references :achieved_article, null: false
       t.timestamps
     end
   end

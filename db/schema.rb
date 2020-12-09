@@ -118,10 +118,10 @@ ActiveRecord::Schema.define(version: 2020_12_08_095526) do
   create_table "thumbs_ups", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "article_id", null: false
-    t.integer "achieved_articles_id", null: false
+    t.integer "achieved_article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["achieved_articles_id"], name: "index_thumbs_ups_on_achieved_articles_id"
+    t.index ["achieved_article_id"], name: "index_thumbs_ups_on_achieved_article_id"
     t.index ["article_id"], name: "index_thumbs_ups_on_article_id"
     t.index ["user_id"], name: "index_thumbs_ups_on_user_id"
   end
