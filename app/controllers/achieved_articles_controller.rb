@@ -1,12 +1,7 @@
 class AchievedArticlesController < ApplicationController
-  before_action :set_article, only: [:index, :edit, :update]
+  before_action :set_article, only: [:edit, :update]
   before_action :set_achieved_article, only: [:show, :edit, :update]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  
-  def index
-    @achieved_article = AchievedArticle.where(article_id: @article.id)
-    @achieved_articles = AchievedArticle.all
-  end
 
   def show
     @comments = @achieved_article.comments

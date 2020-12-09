@@ -20,12 +20,13 @@
 class AchievedArticle < ApplicationRecord
 
   belongs_to :user
-  has_one :article
+  belongs_to :article
 
   has_rich_text :advice
 
   has_many_attached :pictures
   has_many :comments
+  has_many :thumbs_ups
   
   default_scope -> { order(created_at: :desc) }
 
