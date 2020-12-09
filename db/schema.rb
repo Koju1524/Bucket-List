@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_095526) do
 
   create_table "thumbs_ups", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "article_id", null: false
+    t.integer "article_id"
     t.integer "achieved_article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

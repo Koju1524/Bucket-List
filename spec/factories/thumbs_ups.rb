@@ -6,7 +6,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  achieved_article_id :integer          not null
-#  article_id          :integer          not null
+#  article_id          :integer
 #  user_id             :integer          not null
 #
 # Indexes
