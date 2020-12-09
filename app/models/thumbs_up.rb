@@ -18,7 +18,7 @@
 class ThumbsUp < ApplicationRecord
 
   belongs_to :user
-  belongs_to :article
+  belongs_to :article, optional: true
   belongs_to :achieved_article
   
 end

@@ -20,7 +20,7 @@
 class AchievedArticle < ApplicationRecord
 
   belongs_to :user
-  has_one :article
+  belongs_to :article
 
   has_rich_text :advice
 
