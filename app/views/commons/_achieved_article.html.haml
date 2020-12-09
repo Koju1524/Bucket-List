@@ -18,7 +18,7 @@
       .card_iteam
         .card_heart
           = image_tag 'black_thumbs.png', class: 'thumbs_up_0'
-          %span.number= 0
+          %span.number1= achieved_article.thumbs_ups.count
         .card_comment
           = image_tag 'comment.png', class: 'comment_mark'
-          %span.number= achieved_article.comments.count
+          %span.number2= achieved_article.comments.count
