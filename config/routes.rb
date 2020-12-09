@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resource :like, only: [:show, :create, :destroy]
     resources :achieved_articles, only: [:index, :show, :new, :create, :update, :edit] do
       resources :comments, only: [:index, :new, :create, :update, :edit, :destroy]
-      resource :thumbs_up, only: [:show, :create, :destroy]
+      resource :thumbs_up, only: [:create, :destroy]
     end
   end
 

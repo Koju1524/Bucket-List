@@ -7,7 +7,7 @@
 
 .card {
   margin-top: 5px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .user_info {
@@ -68,18 +68,34 @@
   .heart_mark {
     width: 24px;
     height: 24px;
-    margin-right: 3px;
+    position: relative;
+    top: -20px;
+    right: -30px;
   }
 
-  .number { 
+  .number0 { 
     position: relative;
-    top: 1px;
+    top: -20px;
+    right: -35px;
+  }
+
+  .number1 { 
+    position: relative;
+    top: -5px;
+    right: 8px;
+  }
+
+  .number2 { 
+    position: relative;
+    top: -4px;
+    right: -2px;
   }
   
   .comment_mark {
     width: 22px;
     height: 22px;
-    margin: 0 5px 0 9px;
+    position: relative;
+    top: -7px;
   }
 
   .thumbs_up {
@@ -87,14 +103,15 @@
     height: 25px;
     position: relative;
     left: 50px;
+    top: -7px;
   }
 
   .thumbs_up_0 {
     width: 25px;
     height: 25px;
     position: relative;
-    right: 5px;
-    top: -0.5px;
+    right: 15px;
+    top: -8px;
   }
   
 }
