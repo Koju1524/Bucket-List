@@ -33,12 +33,13 @@
       %div.bucket_list_image
         = image_tag @achieved_article.pictures[0], class: 'bucket_list_image'
     .card_iteam
-      .card_thumb
-        = image_tag 'thumbs.png', class: 'thumbs_up'
-        = image_tag 'black_thumbs.png', class: 'thumbs_up_0'
-      
-= javascript_pack_tag 'article'   
+      - if user_signed_in?
+        - if current_user.has_thumbs_up(@achieved_article)
+          = render 'achieved_articles/unthumbs_up'
+        - else
+          = render 'achieved_articles/thumbs_up'
 
+= javascript_pack_tag 'article'   
 
 .article
   %h4 Comments
