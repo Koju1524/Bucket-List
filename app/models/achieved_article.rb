@@ -24,7 +24,7 @@ class AchievedArticle < ApplicationRecord
 
   has_rich_text :advice
 
-  has_many_attached :pictures
+  has_many_attached :images
   has_many :comments
   has_many :thumbs_ups
   

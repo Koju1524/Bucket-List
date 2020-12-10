@@ -31,7 +31,7 @@
       %div.content
         = @achieved_article.achieved_day 
       %div.bucket_list_image
-        = image_tag @achieved_article.pictures[0], class: 'bucket_list_image'
+        = image_tag @achieved_article.images[0], class: 'bucket_list_image'
     .card_iteam
       - if user_signed_in?
         - if current_user.has_thumbs_up(@achieved_article)
