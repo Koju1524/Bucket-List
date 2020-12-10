@@ -1,5 +1,6 @@
 .container
   %p
     ・My Favorite Bucket List
-  - @articles.each do |article|
-    = render 'commons/article', article: article
+    -@achieved_articles.each do |achieved_article|
+      -@article = Article.find(achieved_article.article_id)
+      = render 'commons/achieved_article', article: @article, achieved_article: achieved_article
