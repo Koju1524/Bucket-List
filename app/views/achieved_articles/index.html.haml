@@ -1,2 +1,3 @@
 - @achieved_articles.each do |achieved_article| 
-  = render 'commons/achieved_article', article: @article
+  -@article = Article.find(achieved_article.article_id)
+  = render 'commons/achieved_article', article: @article, achieved_article: achieved_article
