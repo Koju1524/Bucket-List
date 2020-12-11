@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resource :profile, only: [:show, :edit, :update]
 
   resources :accounts, only: [:show] do 
+    resources :achieved_article_list, only: [:index]
     resource :follower, only: [:show]
     resource :following, only: [:show]
 
