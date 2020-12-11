@@ -30,7 +30,7 @@
     %p.follower= @user&.followers&.count || current_user.followers.count
   .profilePage_user_info_title
     %p= link_to 'Posts', {}, {:style=>'text-decoration:none;color:black;'}
-    %p= link_to 'Achieved', {}, {:style=>'text-decoration:none;color:black;'} 
+    %p= link_to 'Achieved', account_achieved_article_list_index_path(user), {:style=>'text-decoration:none;color:black;'} 
     %p= link_to 'Following', account_following_path(user), {:style=>'text-decoration:none;color:black;'}
     %p= link_to 'Follower', account_follower_path(user), {:style=>'text-decoration:none;color:black;'}
 
