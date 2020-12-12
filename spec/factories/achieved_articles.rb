@@ -19,6 +19,9 @@
 #
 FactoryBot.define do
   factory :achieved_article do
-    
+    title { Faker::Lorem.characters(number: 10) }
+    impression {Faker::Lorem.characters(number: 30) }
+    advice { Faker::Lorem.characters(number: 30) }
+    achieved_day { Faker::Date.forward(days: 300) }
   end
 end

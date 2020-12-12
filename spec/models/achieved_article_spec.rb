@@ -20,5 +20,22 @@
 require 'rails_helper'
 
 RSpec.describe AchievedArticle, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:user) { create(:user) }
+  let!(:article) { create(:article, achievement_flag: 'Achievement', user: user) }
+
+  context 'title,impression,advice,achieved_day,imagesが入力されている場合' do
+    let!(:achieved_article) { build(:achieved_article, article: article, user: user) }
+    describe '#create' do
+      before do
+        @achieved_article = FactoryBot.build(:achieved_article)
+        @achieved_article.images = fixture_file_upload('app/assets/images/beach.jpg')
+        @achieved_article.save
+      end
+    end
+
+    it 'achieved_articleが保存できる' do
+      expect(achieved_article).to be_valid
+    end
+  end
+
 end
