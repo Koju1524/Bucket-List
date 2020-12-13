@@ -38,4 +38,14 @@ RSpec.describe AchievedArticle, type: :model do
     end
   end
 
+  context 'title,impression,advice,achieved_dayが入力されている場合' do
+    let!(:achieved_article) { build(:achieved_article, article: article, user: user) }
+
+    it 'achieved_articleが保存できる' do
+      expect(achieved_article).to be_valid
+    end
+    
+  end
+
+
 end
