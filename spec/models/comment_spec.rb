@@ -24,17 +24,28 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   let!(:user) { create(:user) }
-  let!(:article) { create(:article, user: user) }
+  let!(:article) { create(:article, achievement_flag: 'Achievement', user: user) }
+  let!(:achieved_article) { build(:achieved_article, article: article, user: user) }
+
+  describe '#create' do
+    before do
+      @achieved_article = FactoryBot.build(:achieved_article)
+      @achieved_article.images = fixture_file_upload('app/assets/images/beach.jpg')
+      @achieved_article.create
+    end
+  end
 
   context 'contentが入力されている場合' do
-    let!(:comment) { build(:comment, user: user, article: article) }
+
+    let!(:comment) { build(:comment, user: user, article: article, achieved_article: achieved_article) }
 
       it 'commentがsaveできる' do
         expect(comment).to be_valid
       end
+    end
 
   context 'contentの文字がー文字の場合' do
-    let!(:comment) { build(:comment, content: Faker::Lorem.characters(number: 1) , article: article, user: user) }
+    let!(:comment) { build(:comment, content: Faker::Lorem.characters(number: 1), user: user, article: article, achieved_article: achieved_article) }
 
     before do
       comment.save
@@ -43,7 +54,7 @@ RSpec.describe Comment, type: :model do
     it 'commentをsaveできない' do
       expect(comment.errors.messages[:content][0]). to eq('is too short (minimum is 2 characters)')
     end
-  end
 
   end
+
 end
