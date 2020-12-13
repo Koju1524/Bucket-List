@@ -42,6 +42,7 @@ RSpec.describe Comment, type: :model do
       it 'commentがsaveできる' do
         expect(comment).to be_valid
       end
+    end
 
   context 'contentの文字がー文字の場合' do
     let!(:comment) { build(:comment, content: Faker::Lorem.characters(number: 1), user: user, article: article, achieved_article: achieved_article) }
@@ -51,10 +52,9 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'commentをsaveできない' do
-      puts comment.content
       expect(comment.errors.messages[:content][0]). to eq('is too short (minimum is 2 characters)')
     end
-  end
 
   end
+
 end
