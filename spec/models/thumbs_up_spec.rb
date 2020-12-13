@@ -18,5 +18,23 @@
 require 'rails_helper'
 
 RSpec.describe ThumbsUp, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:user) { create(:user) }
+  let!(:article) { create(:article, achievement_flag: 'Achievement', user: user) }
+  let!(:achieved_article) { create(:achieved_article, article: article, user: user) }
+  let!(:thumbs_up) { build(:thumbs_up, achieved_article: achieved_article, article: article, user: user) }
+
+  describe '#create' do
+    before do
+      @achieved_article = FactoryBot.build(:achieved_article)
+      @achieved_article.images = fixture_file_upload('app/assets/images/beach.jpg')
+      @achieved_article.create
+    end
+  end
+
+  context 'about thumbs_up' do
+    it ' can thumbs_up' do
+      expect(thumbs_up).to be_valid
+    end
+  end
+
 end
