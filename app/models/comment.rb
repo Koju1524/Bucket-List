@@ -26,7 +26,7 @@ class Comment < ApplicationRecord
   belongs_to :article
   belongs_to :achieved_article
 
-  validates :content, length: { minimum: 2, maximum: 100 }
+  validates :content, presence: true
 
   default_scope -> { order(created_at: :desc) }
 
