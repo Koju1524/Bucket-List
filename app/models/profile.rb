@@ -21,7 +21,12 @@ class Profile < ApplicationRecord
 
   has_one_attached :avatar
 
+  validates :bio, presence: true
+  validates :bio, length: { minimum: 2, maximum: 60}
+
   validates :location, presence: true
   validates :location, length: { minimum: 2, maximum: 20}
 
+  validates :birthday, presence: true
+  
 end
