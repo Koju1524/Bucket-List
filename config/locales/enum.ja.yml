@@ -1,0 +1,5 @@
+ja:
+  enum:
+    achievement_flags:
+      Unachievement: '未達成'
+      Achievement: '達成済み'
