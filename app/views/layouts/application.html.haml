@@ -25,9 +25,9 @@
             - else
               = image_tag 'smile.png', class: 'user_avatar'
             .dropdown-content.mini
-              = link_to 'Profile', profile_path, {:style=>'text-decoration:none;'}
-              = link_to 'My favorite', favorites_path, {:style=>'text-decoration:none;'}
-              = link_to 'Logout', destroy_user_session_path, {style:'text-decoration:none;', method: 'delete'}
+              = link_to 'プロフィール', profile_path, {:style=>'text-decoration:none;'}
+              = link_to 'お気に入りの達成BucketList', favorites_path, {:style=>'text-decoration:none;'}
+              = link_to 'ログアウト', destroy_user_session_path, {style:'text-decoration:none;', method: 'delete'}
         - else
           = link_to 'Login', new_user_session_path, {class: 'header_login_btn', :style=>'text-decoration:none;'}
     

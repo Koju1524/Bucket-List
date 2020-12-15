@@ -6,7 +6,7 @@
       = user.user_name
     .profilePage_user_actionButton
       - if user_signed_in? && user == current_user 
-        = link_to 'Profile Edit', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
+        = link_to 'プロフィール編集', edit_profile_path, {class: 'profile-edit-btn', :style=>'text-decoration:none;'}
       - else 
         - if current_user&.has_followed?(user)
           = render 'accounts/unfollow'

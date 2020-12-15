@@ -1,4 +1,4 @@
-.card#article-show{data: {article_id: @article.id}}
+.card1#article-show{data: {article_id: @article.id}}
   .user_info
     .user_avatar
       = link_to account_path(@article.user) do
@@ -7,12 +7,12 @@
       = @article.author_name 
     .post_time
       = @article.display_created_at
-    - if user_signed_in? 
+    - if user_signed_in? && @article.user == current_user
       .dropdown
         = image_tag 'shape.png', class: 'dropbtn'
         .dropdown-content.mini1
-          = link_to 'Edit', edit_article_path(@article), {:style=>'text-decoration:none;'}
-          = link_to 'Delete', article_path(@article), {style:'text-decoration:none;', method: 'delete', confirm: 'Are you sure?'}
+          = link_to '編集', edit_article_path(@article), {:style=>'text-decoration:none;'}
+          = link_to '削除', article_path(@article), {style:'text-decoration:none;', method: 'delete', confirm: 'Are you sure?'}
   .card_bucket_list
     .card_detail
       %div.title
@@ -20,17 +20,17 @@
       %div.content
         = @article.title
       %div.title
-        ・Reason
+        ・理由
       %div.content
         = @article.reason
       %div.title
-        ・Necessary Stuff 
+        ・必要なもの
       %div.content
         = @article.necessary_stuff
       %div.title
-        ・Expiration
+        ・期限
       %div.content
-        Until #{@article.expiration}
+        #{@article.expiration} までに
     .card_iteam
       - if user_signed_in?
         .card_heart.hidden.active-heart

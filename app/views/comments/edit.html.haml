@@ -5,7 +5,7 @@
 
 = form_with(model: @comment, url: article_achieved_article_comment_path(@article, @achieved_article, @comment), method: 'put', local: true) do |f|
   %div
-    = f.label :cotent, '・Comment Edit', class: 'title'
+    = f.label :cotent, '・コメント', class: 'title'
   %div
     = f.text_area :content, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'
