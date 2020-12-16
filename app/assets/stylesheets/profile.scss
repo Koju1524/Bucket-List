@@ -21,25 +21,33 @@
   }
 }
 
+.profilePage_user_actionButton {
+  
+}
+
+
 .profilePage_user_private_info {
-  display: flex;
-  margin: 15px 0 0 30px;
+  position: relative;
+  left: 25px;
+  bottom: -20px;
+  margin: 15px 0 0px 40px;
 
   .birthday {
     position: relative;
     left: 35px;
-    bottom: 25px;
+    bottom: 27px;
     }
   
   .profilePage_user.location {
+    float: right;
     position: relative;
-    left: 55px;
-    bottom: -4px;
+    left: -85px;
+    bottom: 65px;
   
     .location {
       position: relative;
       left: 20px;
-      bottom: 4px;
+      bottom: 8px;
     }
   }
 }
