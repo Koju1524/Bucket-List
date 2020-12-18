@@ -40,10 +40,9 @@
   }
 
   .comment_mark {
-    float: right;
     position: relative;
-    top: -90px;
-    right: 80px;
+    top: -100px;
+    right: -360px;
   }
 
 }
@@ -54,6 +53,12 @@
   position: relative;
   top: -30px;
   right: -10px;
+}
+
+.edit_mark {
+  position: relative;
+  right: -380px;
+  bottom: 100px;
 }
 
 

@@ -1,8 +1,8 @@
 @import './variables';
 
 .dropbtn {
-  position: relative;
-  left: 100px;
+  position: absolute;
+  left: 140px;
   bottom: 14px;
   cursor: pointer;
   display: inline-block;
@@ -11,28 +11,29 @@
 .dropdown-content {
   font-weight: normal;
   display: none;
-  right: 15px;
+  right: 10px;
   position: absolute;
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
   &.mini {
-    min-width: 85px;
+    min-width: 85px
   }
 
   &.mini1 {
-    min-width: 80px;
+    min-width: 70px;
     position: absolute;
-    left: 70px;
+    left: 115px;
+    top: 40px;
     text-align: center;
   }
 
   &.mini2 {
-    min-width: 80px;
+    min-width: 40px;
     position: absolute;
-    top: -10px;
-    left: 320px;
+    top: -60px;
+    left: 350px;
     text-align: center;
   }
 }

@@ -24,8 +24,8 @@
   .profilePage_user_bio
     = user.profile&.bio
   .profilePage_user_info_figures
-    %p.posts= @user&.articles&.count || current_user.articles.count
-    %p.achieved= @user&.achieved_articles&.count || current_user.achieved_articles.count
+    %p.posts= @user&.articles&.count || current_user.articles.count 
+    %p.achieved= @user&.achieved_articles&.count || current_user.achieved_articles.count 
     %p.following= @user&.followings&.count || current_user.followings.count
     %p.follower= @user&.followers&.count || current_user.followers.count
   .profilePage_user_info_title
