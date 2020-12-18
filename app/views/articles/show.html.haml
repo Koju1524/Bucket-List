@@ -7,12 +7,12 @@
       = @article.author_name 
     .post_time
       = @article.display_created_at
-    - if user_signed_in? && @article.user == current_user
-      .dropdown
-        = image_tag 'shape.png', class: 'dropbtn'
-        .dropdown-content.mini1
-          = link_to '編集', edit_article_path(@article), {:style=>'text-decoration:none;'}
-          = link_to '削除', article_path(@article), {style:'text-decoration:none;', method: 'delete', confirm: 'Are you sure?'}
+  - if user_signed_in? && @article.user == current_user
+    .dropdown
+      = image_tag 'shape.png', class: 'dropbtn'
+      .dropdown-content.mini1
+        = link_to '編集', edit_article_path(@article), {:style=>'text-decoration:none;'}
+        = link_to '削除', article_path(@article), {style:'text-decoration:none;', method: 'delete', confirm: 'Are you sure?'}
   .card_bucket_list
     .card_detail
       %div.title

@@ -7,11 +7,11 @@
       = @achieved_article.user.user_name 
     .post_time
       = date_format(@achieved_article.created_at)
-    - if user_signed_in? && current_user.has_written?(@achieved_article)
-      .dropdown
-        = image_tag 'shape.png', class: 'dropbtn'
-        .dropdown-content.mini1
-          = link_to '編集', edit_article_achieved_article_path(@achieved_article.article_id, @achieved_article), {:style=>'text-decoration:none;'}
+  - if user_signed_in? && current_user.has_written?(@achieved_article)
+    .dropdown
+      = image_tag 'shape.png', class: 'dropbtn'
+      .dropdown-content.mini1
+        = link_to '編集', edit_article_achieved_article_path(@achieved_article.article_id, @achieved_article), {:style=>'text-decoration:none;'}
   .card_bucket_list
     .card_detail
       %div.title
@@ -58,9 +58,9 @@
               = image_tag comment.user.profile.avatar, class:'comment_user_avatar'
           .article_comment_detail
             %p.commen_content= comment.content
-            - if comment.user == current_user
-              .dropdown
-                = image_tag 'shape.png', class:'edit_mark'
-                .dropdown-content.mini2
-                  = link_to '編集', edit_article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), {:style=>'text-decoration:none;'}
-                  = link_to '削除', article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}
+          - if comment.user == current_user
+            .dropdown
+              = image_tag 'shape.png', class:'dropbtn1'
+              .dropdown-content.mini2
+                = link_to '編集', edit_article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), {:style=>'text-decoration:none;'}
+                = link_to '削除', article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}

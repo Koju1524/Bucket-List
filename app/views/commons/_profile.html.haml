@@ -13,14 +13,12 @@
         - else 
           = render 'accounts/follow'
   .profilePage_user_private_info
-    .profilePage_user_birthday
-      %i.fas.fa-birthday-cake
-      %p.birthday 
-        = user.birthday || 'Undifine'
-    .profilePage_user.location
-      %i.fas.fa-location-arrow
-      %p.location 
-        = user.location || 'Undifine'
+    %i.fas.fa-birthday-cake
+    %p.birthday 
+      = user.birthday || 'Undifine'
+    %i.fas.fa-location-arrow
+    %p.location 
+      = user.location || 'Undifine'
   .profilePage_user_bio
     = user.profile&.bio
   .profilePage_user_info_figures
