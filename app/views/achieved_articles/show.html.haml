@@ -57,7 +57,7 @@
             = link_to comment.user.profile do
               = image_tag comment.user.profile.avatar, class:'comment_user_avatar'
           .article_comment_detail
-            %p.commen_content= comment.content
+            .comment_content= comment.content
           - if comment.user == current_user
             .dropdown
               = image_tag 'shape.png', class:'dropbtn1'

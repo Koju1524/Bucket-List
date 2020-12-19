@@ -28,16 +28,6 @@
     left: 10px;
     margin-right: 10px;
   }
-  
-  p {
-    font-size: 12px;
-    width: 270px;
-    height: 40px;
-    position: relative;
-    top: -40px;
-    right: -65px;
-    word-wrap: break-word;
-  }
 
   .comment_mark {
     position: relative;
@@ -45,6 +35,16 @@
     right: -360px;
   }
 
+}
+
+.comment_content {
+  font-size: 12px;
+  width: 270px;
+  height: 40px;
+  position: relative;
+  top: -45px;
+  right: -65px;
+  word-wrap: break-word;
 }
 
 .heart_mark1 {
