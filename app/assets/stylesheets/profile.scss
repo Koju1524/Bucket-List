@@ -4,8 +4,9 @@
   font-weight: 500;
 }
 
+
 .profilePage_user {
-  display: flex;
+  // display: flex;
 
   .user_image {
     width: 42px;
@@ -16,31 +17,39 @@
 
   .profilePage_user_name {
     position: relative;
-    left: 30px;
-    bottom: -8px;
+    left: 90px;
+    bottom: 33px;
   }
+}
+
+.profilePage_user_actionButton {
+  float: right;
+  position: relative;
+  right: 250px;
+  bottom: 70px;
 }
 
 .profilePage_user_private_info {
   display: flex;
-  margin: 15px 0 0 30px;
+  margin: 10px 0 0px 40px;
+
+  .fa-birthday-cake {
+    margin-right: 20px;
+  }
 
   .birthday {
-    position: relative;
-    left: 35px;
-    bottom: 25px;
+    margin: -5px 0px 0 0;
     }
-  
-  .profilePage_user.location {
+
+  .fa-location-arrow {
     position: relative;
-    left: 55px;
-    bottom: -4px;
-  
-    .location {
-      position: relative;
-      left: 20px;
-      bottom: 4px;
-    }
+    left: 90px;
+  }
+
+  .location {
+    position: relative;
+    left: 110px;
+    bottom: 7px;
   }
 }
 
@@ -48,44 +57,28 @@
   position: relative;
   left: 20px;
   bottom: 12px;
-  margin-right: 20px;
+  margin: 40px 0 40px 20px;
 }
 
 .profilePage_user_info_figures {
   display: flex;
-  margin: 0 20px 0 8px;
+  position: relative;
+  top: 5px;
 
-  .posts {
-    position: relative;
-    left: 20px;
-    top: 25px;
+  p {
+    padding: 0px 47px;
   }
 
-  .achieved {
-    position: relative;
-    left: 100px;
-    top: 25px;
-  }
-
-  .following {
-    position: relative;
-    left: 200px;
-    top: 25px;
-  }
-
-  .follower {
-    position: relative;
-    left: 295px;
-    top: 25px;
+  .following{
+    margin: 0 15px;
   }
 }
 
 .profilePage_user_info_title {
   display: flex;
-  margin: 0 5px 0 2px;
 
   p {
-    padding: 17px;
+    padding: 0px 20px;
   }
 }
 

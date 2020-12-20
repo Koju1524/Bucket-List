@@ -5,19 +5,19 @@
 
   = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
     %div
-      = f.label :bio, '・Bio (自己紹介)', class: 'title'
+      = f.label :bio, '・自己紹介', class: 'title'
     %div
       = f.text_field :bio, class: 'text'
     %div
-      = f.label :location, '・Location', class: 'title'
+      = f.label :location, '・現在地', class: 'title'
     %div
       = f.text_field :location, class: 'text'
     %div
-      = f.label :birthday, '・Birthday', class: 'title'
+      = f.label :birthday, '・誕生日', class: 'title'
     %div
       = f.date_field :birthday, class: 'text'
     %div
-      = f.label :avatar, '・Profile Picture', class: 'title'
+      = f.label :avatar, '・プロフィール写真', class: 'title'
     %div
       = f.file_field :avatar, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'

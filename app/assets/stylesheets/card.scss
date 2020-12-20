@@ -13,55 +13,52 @@
 
   .figure {
     position: relative;
-    top: -35px;
+    top: -37px;
     left: 130px;
+    font-size: 20px;
   }
 
-  .article_comment {
-    display: flex;
+  .comment_user_avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    cursor: pointer;
     position: relative;
-    top: -50px;
-    left: -35px;
-  
-    .comment_user_avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 100%;
-      cursor: pointer;
-      position: relative;
-      top: -9px;
-      left: 10px;
-      margin-right: 10px;
-    }
-    
-    p {
-      font-size: 12px;
-      width: 300px;
-      height: 40px;
-      position: relative;
-      right: -10px;
-      word-wrap: break-word;
-    }
-
-    .comment_content {
-      margin-top: 7px;
-    }
+    top: -9px;
+    left: 10px;
+    margin-right: 10px;
   }
 
   .comment_mark {
     position: relative;
-    top: -58px;
-    left: 340px;
+    top: -100px;
+    right: -360px;
   }
 
+}
+
+.comment_content {
+  font-size: 12px;
+  width: 270px;
+  height: 40px;
+  position: relative;
+  top: -45px;
+  right: -65px;
+  word-wrap: break-word;
 }
 
 .heart_mark1 {
   width: 24px;
   height: 24px;
   position: relative;
-  top: -40px;
-  right: -30px;
+  top: -30px;
+  right: -10px;
+}
+
+.edit_mark {
+  position: relative;
+  right: -380px;
+  bottom: 100px;
 }
 
 

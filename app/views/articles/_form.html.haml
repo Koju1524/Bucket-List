@@ -5,23 +5,23 @@
 
   = form_with(model: article, local: true) do |f|
     %div
-      = f.label :title, '・My Bucket List (人生で一度はしてみたいこと)', class: 'title'
+      = f.label :title, '・My Bucket List', class: 'title'
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :reason, '・Reason (理由)', class: 'title'
+      = f.label :reason, '・理由', class: 'title'
     %div
       = f.text_area :reason, class: 'text'
     %div
-      = f.label :necessary_stuff, '・Necessary Stuff (必要なモノ)', class: 'title'
+      = f.label :necessary_stuff, '・必要なもの', class: 'title'
     %div
       = f.rich_text_area :necessary_stuff, class: 'text'
     %div
-      = f.label :expiration, '・Expiration (期限) ', class: 'title'
+      = f.label :expiration, '・期限', class: 'title'
     %div
       = f.date_field :expiration, class: 'text'
     %div
-      = f.label :achievement_flag, '・Achievement Flag (達成フラグ)', class: 'title'
+      = f.label :achievement_flag, '・達成フラグ', class: 'title'
     %div
-      = f.select :achievement_flag, Article.achievement_flags.keys, {}, { class: 'text'}
+      = f.select :achievement_flag, Article.achievement_flags.map { |k, v| [ I18n.t("enum.achievement_flags.#{k}"), k ] }, {}, { class: 'text'}
     = f.submit 'Submit', class: 'btn-primary'

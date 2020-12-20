@@ -22,13 +22,8 @@ class Article < ApplicationRecord
   has_rich_text :necessary_stuff
 
   validates :title, presence: true
-  validates :title, length: { minimum: 2, maximum: 100 }
-
   validates :reason, presence: true
-  validates :reason, length: { minimum: 2, maximum: 150 }
-
   validates :necessary_stuff, presence: true
-
   validates :expiration, presence: true
 
   has_many :likes, dependent: :destroy

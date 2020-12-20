@@ -7,11 +7,11 @@
       = @achieved_article.user.user_name 
     .post_time
       = date_format(@achieved_article.created_at)
-    - if user_signed_in? && current_user.has_written?(@achieved_article)
-      .dropdown
-        = image_tag 'shape.png', class: 'dropbtn'
-        .dropdown-content.mini1
-          = link_to 'Edit', edit_article_achieved_article_path(@achieved_article.article_id, @achieved_article), {:style=>'text-decoration:none;'}
+  - if user_signed_in? && current_user.has_written?(@achieved_article)
+    .dropdown
+      = image_tag 'shape.png', class: 'dropbtn'
+      .dropdown-content.mini1
+        = link_to '編集', edit_article_achieved_article_path(@achieved_article.article_id, @achieved_article), {:style=>'text-decoration:none;'}
   .card_bucket_list
     .card_detail
       %div.title
@@ -19,15 +19,15 @@
       %div.content
         = @achieved_article.title
       %div.title
-        ・Impression
+        ・感想
       %div.content
         = @achieved_article.impression
       %div.title
-        ・Advice
+        ・アドバイス
       %div.content
         = @achieved_article.advice
       %div.title
-        ・Achieved Day
+        ・達成した日付
       %div.content
         = @achieved_article.achieved_day 
       %div.bucket_list_image
@@ -57,10 +57,10 @@
             = link_to comment.user.profile do
               = image_tag comment.user.profile.avatar, class:'comment_user_avatar'
           .article_comment_detail
-            %p.commen_content= comment.content
-            - if comment.user == current_user
-              .dropdown
-                = image_tag 'shape.png', class:'comment_mark'
-                .dropdown-content.mini2 
-                  = link_to 'Edit', edit_article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), {:style=>'text-decoration:none;'}
-                  = link_to 'Delete', article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}
+            .comment_content= comment.content
+          - if comment.user == current_user
+            .dropdown
+              = image_tag 'shape.png', class:'dropbtn1'
+              .dropdown-content.mini2
+                = link_to '編集', edit_article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), {:style=>'text-decoration:none;'}
+                = link_to '削除', article_achieved_article_comment_path(@achieved_article.article_id, @achieved_article, comment.id), { method: 'delete', confirm: 'Are you sure?', style: 'text-decoration:none;'}

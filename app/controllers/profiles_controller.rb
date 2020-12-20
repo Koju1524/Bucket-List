@@ -13,9 +13,9 @@ class ProfilesController < ApplicationController
     @profile = current_user.prepare_profile
     @profile.assign_attributes(profile_paramas)
     if @profile.save
-      redirect_to profile_path, notice: 'Successful Edit !!'
+      redirect_to profile_path, notice: '編集できました！'
     else
-      flash.now[:error] = 'Failed Edit'
+      flash.now[:error] = '編集に失敗しました'
       render :edit
     end
   end

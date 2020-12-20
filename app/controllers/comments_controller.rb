@@ -14,18 +14,18 @@ class CommentsController < ApplicationController
     params[:comment][:achieved_article_id] = @achieved_article.id
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to article_achieved_article_path(@article, @achieved_article),  notice: 'Successful Comment!!'
+      redirect_to article_achieved_article_path(@article, @achieved_article),  notice: 'コメントできました!'
     else
-      flash.now[:error] = 'Failed Comment'
+      flash.now[:error] = 'コメントに失敗しました'
       render :new
     end
   end
 
   def update
     if @comment.update(comment_params)
-      redirect_to article_achieved_article_path(@article, @achieved_article), notice: 'Edit Comment!!'
+      redirect_to article_achieved_article_path(@article, @achieved_article), notice: 'コメントを編集しました!'
     else
-      flash.now[:error] = 'Failed Edit'
+      flash.now[:error] = '編集に失敗しました'
       render :edit
     end
   end
@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
     achieved_article = AchievedArticle.find(params[:achieved_article_id])
     comment = achieved_article.comments.find(params[:id])
     comment.destroy!
-    redirect_to article_achieved_article_path(article, achieved_article), notice: 'Deleted Comment'
+    redirect_to article_achieved_article_path(article, achieved_article), notice: 'コメントを削除しました'
   end
 
   private

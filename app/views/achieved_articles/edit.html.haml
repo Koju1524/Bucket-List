@@ -5,19 +5,19 @@
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :impression, '・Impression(感想)', class: 'title'
+      = f.label :impression, '・感想', class: 'title'
     %div
       = f.text_area :impression, class: 'text'
     %div
-      = f.label :advice, '・Advice (アドバイス)', class: 'title'
+      = f.label :advice, '・アドバイス', class: 'title'
     %div
       = f.rich_text_area  :advice, class: 'text'
     %div
-      = f.label :achieved_day, '・Achieved day (達成した日) ', class: 'title'
+      = f.label :achieved_day, '・達成した日付', class: 'title'
     %div
       = f.date_field :achieved_day, class: 'text'
     %div
-      = f.label :images, '・Pictures', class: 'title'
+      = f.label :images, '・写真', class: 'title'
     %div
       = f.file_field :images, multiple: true, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'

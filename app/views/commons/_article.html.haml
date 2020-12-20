@@ -1,5 +1,5 @@
 = link_to article_path(article), {:style=>'color:black;text-decoration:none;'} do
-  .card
+  .card1
     .user_info
       .user_avatar
         = image_tag article.user.avatar_image, class: 'article_user_avatar'
@@ -13,7 +13,7 @@
           ・My Bucket List
         %div.bucket_list
           = article.title
-      .card_iteam
+      .card_iteam1
         .card_heart
           = image_tag 'heart1.png', class: 'heart_mark'
           %span.number0= article.like_count
