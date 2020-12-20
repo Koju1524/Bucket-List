@@ -16,13 +16,14 @@ RSpec.describe 'AchievedArticles', type: :request do
         achieved_article_params = attributes_for(:achieved_article)
         achieved_article_params[:user_id] = user.id
         achieved_article_params[:article_id] = article.id
+        achieved_article_params[:images] = fixture_file_upload('app/assets/images/beach.jpg')
         put article_achieved_article_path(article_id: article.id, id: achieved_article, achieved_article: achieved_article_params)
         expect(response).to have_http_status(302)
         expect(AchievedArticle.first.title).to eq(achieved_article_params[:title])
         expect(AchievedArticle.first.impression).to eq(achieved_article_params[:impression])
         expect(AchievedArticle.first.advice.body.to_plain_text).to eq(achieved_article_params[:advice])
         expect(AchievedArticle.first.achieved_day).to eq(achieved_article_params[:achieved_day])
-        expect(AchievedArticle.first.images.attach).to eq(achieved_article_params[:images])
+        expect(AchievedArticle.first.images.attach).to eq(true)
       end
     end
 

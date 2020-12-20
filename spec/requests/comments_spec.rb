@@ -16,24 +16,24 @@ RSpec.describe 'Comments', type: :request do
   end
 
 
-  # describe 'POST/articles' do
-  #   context '' do
+  describe 'POST/articles' do
+    context '' do
 
-  #     before do
-  #       sign_in user
-  #     end
+      before do
+        sign_in user
+      end
 
-  #     it 'comment save' do
-  #       comment_params =  attributes_for(:comment)
-  #       comment_params[:user_id] = user.id
-  #       comment_params[:article__id] = article.id
-  #       comment_params[:achieved_article_id] = achieved_article.id
-  #       post article_achieved_article_comments_path(article_id: article.id, achieved_article_id: achieved_article.id, comment: comment_params)
-  #       expect(Comment.first.content).to eq(comment_params[:content])
-  #     end
+      it 'comment save' do
+        comment_params =  attributes_for(:comment)
+        comment_params[:user_id] = user.id
+        comment_params[:article__id] = article.id
+        comment_params[:achieved_article_id] = achieved_article.id
+        post article_achieved_article_comments_path(article_id: article.id, achieved_article_id: achieved_article.id, comment: comment_params)
+        expect(Comment.first.content).to eq(comment_params[:content])
+      end
 
-  #   end
+    end
 
-  # end
+  end
 
 end
