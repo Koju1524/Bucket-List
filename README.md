@@ -116,15 +116,18 @@ ER図
 AsaKotsu_ERD
 
 ### 各テーブルについて
-テーブル名	説明<br>
-users	:ユーザー情報<br>
-profiles :ユーザーのプロフィール情報<br>
-articles	:投稿したBucket Listの情報<br>
-achieved_articles :達成したBucket Listへのの情報<br>
-comments :ユーザー投稿への、コメントの情報<br>
-likes	:Bucket Listへの、いいねの情報<br>
-thumbs_ups :達成したBucket Listへの、グットの情報<br>
-relationships	:フォロー/フォロワーのユーザー情報<br>
+
+| テーブル名 | 説明 |
+| --- | --- |
+| users| ユーザー情報 |
+| profiles | ユーザーのプロフィール情報 |
+| articles | 投稿したBucket Listの情報 |
+| achieved_articles | 達成したBucket Listへの情報 |
+| comments | ユーザー投稿への、コメントの情報 |
+| likes | Listへの、いいねの情報 |
+| thumbs_ups | 達成したBucket Listへの、グットの情報 |
+| relationships | フォロー/フォロワーのユーザー情報 |
+
 
 
 ### Bucket List達成機能 関連のポイント
