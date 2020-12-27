@@ -118,7 +118,7 @@ AsaKotsu_ERD
 ### 各テーブルについて
 
 | テーブル名 | 説明 |
-| --- | --- |
+| :---: | --- |
 | users| ユーザー情報 |
 | profiles | ユーザーのプロフィール情報 |
 | articles | 投稿したBucket Listの情報 |
