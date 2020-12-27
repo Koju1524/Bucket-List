@@ -17,7 +17,8 @@ URL：
 
 # 開発した背景
 
-　Bucket Listという言葉を初めて知ったのは、友達のアメリカ人と話していたときです。Do you have somehting that you'd like to in the line like skydiving?
+　Bucket Listという言葉を初めて知ったのは、友達のアメリカ人と話していたときです。<br>
+Do you have somehting that you'd like to in the line like skydiving?
 とこの先何か挑戦してみたいことがあるかを尋ねたときに、You mean Bucket List?? とそのとき初めてBucket Listという言葉の存在を知りました。
 
 それがBucket Listというアプリケーションを作ろうと思ったきっかけです。
@@ -35,15 +36,15 @@ URL：
 
 そんなとき、Bucket Listをアプリケーションにすれば、
 
-・Bucket Listをリスト化でき、忘れない<br>
-・他のユーザーとBucket Listをシェアできる<br>
-・インスパレーションンをギブ＆テイクできる<br>
-・達成するまでのロードマップの手助けとなる<br>
+✔️ Bucket Listをリスト化でき、忘れない<br>
+✔️ 他のユーザーとBucket Listをシェアできる<br>
+✔️ インスパレーションンをギブ＆テイクできる<br>
+✔️ 達成するまでのロードマップの手助けとなる<br>
 
 　と考え、このアプリの開発に取り組みました。
  
 また、コロナウイルスの影響もこのアプリを作るきっかけに関係しています。<br>
-　今、世界中の人々がコロナウイルスで挑戦したいことができなかったり、したくてもできない環境にいます。しかしながら、この期間をポジティブに考え、本当にしたいことは何かを考え、準備するいい機会だと私は思いました。人類がコロナウイルスが打ち勝ったときに、すぐに動きだせるようにこのアプリが少しでも手助けできればと思いました。
+　今、世界中の人々がコロナウイルスで挑戦したいことができなかったり、したくてもできない環境にいます。しかしながら、この期間をポジティブに考え、本当にしたいことは何かを考え、準備するいい機会だと私は思いました。人類がコロナウイルスが打ち勝ったときに、すぐに動きだせるようにこのアプリが少しでも手助けできればと思いました。<br>
 　
 このような背景から、Bucket Listをリスト化するアプリを作ってみたい思い、実装を開始しました。
 
@@ -51,34 +52,34 @@ URL：
 
 # 使用技術
 
-### フロントエンド
+### ○フロントエンド
 HTML / SCC / Sass / Bootstrap / slick
 jquery-rails　4.4.0
 
-### バックエンド
+### ○バックエンド
 
 Ruby 2.6.5
 rails 6.0.3
 
-### インフラ
+### ○インフラ
 sqlite3 1.4.2
 AWS ( EC2, S3, Route53, VPC, IAM )
 
-### その他使用ツール
+### ○その他使用ツール
 Visual Studio Code
 AWS構成図
 
 
 # 機能一覧
 
-#### ・ユーザー登録関連
+#### ○ユーザー登録関連
 　新規登録、プロフィール編集機能
 　ログイン、ログアウト機能
 
-#### ・Bucket Listの投稿機能(CRUD)
+#### ○Bucket Listの投稿機能(CRUD)
 　Bucket Listの新規作成、一覧表示、編集、削除機能
 
-#### ・達成したBucket Listの投稿機能(CRUD)
+#### ○達成したBucket Listの投稿機能(CRUD)
 　達成したBucket Listの作成、一覧表示、編集機能
 
 　Bucket Listを新規作成し、それを達成することができた場合、編集ページの達成フラグから達成を選択すると、達成したBucket Listのページに飛ぶ。
@@ -94,19 +95,19 @@ AWS構成図
 
 動画explain
 
-#### ・コメント機能(CRUD)
+#### ○コメント機能(CRUD)
 　達成したBucket Listにコメント作成、一覧表示、編集、削除機能
 
-#### ・いいね機能 (jquery)
+#### ○いいね機能 (jquery)
 　新規作成したBucket Listにいいねボタン
 
-#### ・フォロー機能(ajax)
+#### ○フォロー機能(ajax)
 　ユーザーのプロフィールからフォロー、アンフォローできる
 
-#### ・グット機能(ajax)
+#### ○グット機能(ajax)
 　達成したBucket Listにグットボタン
 
-#### ・投稿、編集、削除、ログイン、ログアウト時にフラッシュメッセージを表示
+#### ○投稿、編集、削除、ログイン、ログアウト時にフラッシュメッセージを表示
 　画像アップロード機能 (AWS S3バケット)
 
 ハンバーガーメニュー(jQuery)
@@ -116,14 +117,14 @@ AsaKotsu_ERD
 
 ### 各テーブルについて
 テーブル名	説明
-users	:ユーザー情報
-profiles :ユーザーのプロフィール情報
-articles	:投稿したBucket Listの情報
-achieved_articles :達成したBucket Listへのの情報
-comments :ユーザー投稿への、コメントの情報
-likes	:Bucket Listへの、いいねの情報
-thumbs_ups :達成したBucket Listへの、グットの情報
-relationships	:フォロー/フォロワーのユーザー情報
+users	:ユーザー情報<br>
+profiles :ユーザーのプロフィール情報<br>
+articles	:投稿したBucket Listの情報<br>
+achieved_articles :達成したBucket Listへのの情報<br>
+comments :ユーザー投稿への、コメントの情報<br>
+likes	:Bucket Listへの、いいねの情報<br>
+thumbs_ups :達成したBucket Listへの、グットの情報<br>
+relationships	:フォロー/フォロワーのユーザー情報<br>
 
 
 ### Bucket List達成機能 関連のポイント
