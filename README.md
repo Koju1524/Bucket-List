@@ -116,7 +116,7 @@ ER図
 AsaKotsu_ERD
 
 ### 各テーブルについて
-テーブル名	説明
+テーブル名	説明<br>
 users	:ユーザー情報<br>
 profiles :ユーザーのプロフィール情報<br>
 articles	:投稿したBucket Listの情報<br>
