@@ -115,7 +115,7 @@ DB設計
 ER図
 AsaKotsu_ERD
 
-### 各テーブルについて
+### ○各テーブルについて
 
 | テーブル名 | 説明 |
 | :---: | :---: |
@@ -124,13 +124,13 @@ AsaKotsu_ERD
 | articles | 投稿したBucket Listの情報 |
 | achieved_articles | 達成したBucket Listへの情報 |
 | comments | ユーザー投稿への、コメントの情報 |
-| likes | Listへの、いいねの情報 |
+| likes | Bucket Listへの、いいねの情報 |
 | thumbs_ups | 達成したBucket Listへの、グットの情報 |
 | relationships | フォロー/フォロワーのユーザー情報 |
 
 
 
-### Bucket List達成機能 関連のポイント
+### ○Bucket List達成機能 関連のポイント
 achieved_articleテーブル(達成したBucket List)はarticleテーブル(Bucket List)と繋がっているため、先にBucket Listを作成しないと達成したBucket Listを投稿することはできません。また、投稿する際には、Bucket Listの編集ページの達成フラグカラムから達成済みを選択し、submitして下さい。すると、達成したBucket Listの投稿画面に移行します。仕組みとして、articleテーブルのachievement_flagの値が利用され、articles-controllerのedit-actionでachievement_flagの値が達成になっていれば、達成したBucket Listの投稿画面に遷移するように場合分けしています。
 
 ＊すでに達成したBucket Listを投稿した場合は、articleの編集ページからではなく、achieved_articletの編集ページから編集を行って下さい。
