@@ -3,19 +3,19 @@
 
 URL：
 
-# アプリ概要
+## アプリ概要
 こちらのアプリのコンセプトは、以下の３つです。
 
 ・自分が挑戦したいことをリスト化することで、人生の中で本当にしたいことの明確する<br>
 ・投稿・コメント機能通じて、他のユーザーとの交流、そしてインスパレーションを受ける<br>
 ・今度は自分がインスピレーターとしての価値をユーザーに届ける<br>
 
-基本的にはtwitterのような投稿、コメント、いいね、フォロー機能のあるSNSですが、 その他に以下のような特徴のあるアプリです。
+*基本的にはtwitterのような投稿、コメント、いいね、フォロー機能のあるSNSですが、 その他に以下のような特徴のあるアプリです。
 
-アプリから、Bucket Listを作成、編集、削除できる<br>
-設定したBucket Listを達成できた場合は、編集ページの達成フラグから達成Bucket Listに自動的に移行される<br>
+・アプリから、Bucket Listを作成、編集、削除できる<br>
+・設定したBucket Listを達成できた場合は、編集ページの達成フラグから達成Bucket Listに自動的に移行される<br>
 
-# 開発した背景
+## 開発した背景
 
 　Bucket Listという言葉を初めて知ったのは、友達のアメリカ人と話していたときです。<br>
 Do you have somehting that you'd like to in the line like skydiving?
@@ -50,7 +50,7 @@ Do you have somehting that you'd like to in the line like skydiving?
 
 使用画面のイメージ
 
-# 使用技術
+## 使用技術
 
 ### ○フロントエンド
 HTML / SCC / Sass / Bootstrap / slick
@@ -70,7 +70,7 @@ Visual Studio Code
 AWS構成図
 
 
-# 機能一覧
+## 機能一覧
 
 #### ○ユーザー登録関連
 　新規登録、プロフィール編集機能
