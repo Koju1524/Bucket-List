@@ -22,7 +22,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'active_decorator'
 gem 'active_model_serializers'
 gem 'annotate'
 gem 'better_errors'
