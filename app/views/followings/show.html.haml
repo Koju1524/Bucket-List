@@ -2,7 +2,7 @@
   .follow_info
     .follow_avatar 
       = link_to account_path(following.id) do
-        = image_tag following.profile.avatar, class:'follow_image'
+        = image_tag following.avatar_image, class:'follow_image'
     .follow_name
       = following.user_name
     .follow_bio

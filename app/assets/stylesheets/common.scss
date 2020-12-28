@@ -24,12 +24,14 @@
   z-index: 1;
 
   &.mini {
-    min-width: 85px
+    min-width: 85px;
+    position: absolute;
+    top: -5px;
   }
 
   &.mini1 {
     position: absolute;
-    top: -20px;
+    top: -45px;
     text-align: center;
   }
 
