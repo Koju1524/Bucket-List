@@ -27,8 +27,13 @@ $(function() {
     speed: 500
 });
 
-$('.slick-dots li').on('mouseover', function() {
-  $('.a').slick('goTo', $(this).index());
+  $('.slick-dots li').on('mouseover', function() {
+    $('.a').slick('goTo', $(this).index());
+  });
+
 });
 
+$('.slick-track').css({
+  'width':'80%',
+  'margin-right':'20px'
 });
