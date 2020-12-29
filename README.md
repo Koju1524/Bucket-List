@@ -48,7 +48,7 @@ Do you have something that you'd like to in the line like skydiving?
 
 ## 使用画面のイメージ
 
-![使い方イメージ](Screen Shot 2020-12-29 at 16.37.55.png)
+![使い方イメージ](2020-12-29 at 16.37.55.png)
 
 ## 使用技術
 
