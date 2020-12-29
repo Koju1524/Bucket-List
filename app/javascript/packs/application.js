@@ -32,8 +32,3 @@ $(function() {
   });
 
 });
-
-$('.slick-track').css({
-  'width':'80%',
-  'margin-right':'20px'
-});
