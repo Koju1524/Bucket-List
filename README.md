@@ -3,6 +3,8 @@
 
 URL：
 
+![bucket-list-3675656_1280](https://user-images.githubusercontent.com/68426424/103326168-6c71a580-4a92-11eb-9017-c2953ea29738.png)
+
 ## アプリ概要
 こちらのアプリのコンセプトは、以下の３つです。
 
