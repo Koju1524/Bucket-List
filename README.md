@@ -86,15 +86,9 @@ Visual Studio Code<br>
 　Bucket Listを新規作成し、それを達成することができた場合、編集ページの達成フラグから達成を選択すると、達成したBucket Listのページに遷移します。<br>
 そして、感想やアドバイスなどのカラムを記入すると、達成済みBucket Listに移行されます。
 
-　動画explain
-
 　また、このとき写真を複数投稿でき、写真をスライドしてみることができる
 
-　動画explain
-
 　ホームページの左上のBucket Listを押すと全ユーザーが投稿したBucket Listをみることができ、Bucket Listのタグを押すと、フォローしているユーザーのBucket List、達成できたBucket Listのタグを押すと、フォローしているユーザーの達成したBucket Listを閲覧することができます。
-
-動画explain
 
 #### ○コメント機能(CRUD)
 　・達成したBucket Listにコメント作成、一覧表示、編集、削除機能
@@ -129,7 +123,6 @@ ER図
 | likes | Bucket Listへの、いいねの情報 |
 | thumbs_ups | 達成したBucket Listへの、グットの情報 |
 | relationships | フォロー/フォロワーのユーザー情報 |
-
 
 
 ### ○Bucket List達成機能 関連のポイント
