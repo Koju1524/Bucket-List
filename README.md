@@ -48,8 +48,7 @@ Do you have something that you'd like to in the line like skydiving?
 
 ## 使用画面のイメージ
 
-![写真](Screen Shot 2020-12-29 at 16.37.55.png)
-
+![写真](images/usage.png)
 
 ## 使用技術
 
@@ -112,10 +111,10 @@ AWS構成図<br>
 #### ○投稿、編集、削除、ログイン、ログアウト時にフラッシュメッセージを表示
 　・画像アップロード機能 (AWS S3バケット)
 
-ハンバーガーメニュー(jQuery)
-DB設計
+## DB設計
+
 ER図
-AsaKotsu_ERD
+![写真](images/ER.png)
 
 ### ○各テーブルについて
 
