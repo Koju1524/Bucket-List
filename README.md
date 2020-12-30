@@ -68,7 +68,7 @@ AWS ( EC2, S3, Route53, VPC, IAM )
 
 ### ○その他使用ツール
 Visual Studio Code<br>
-AWS構成図<br>
+
 
 
 ## 機能一覧
@@ -115,7 +115,7 @@ AWS構成図<br>
 
 ER図
 
-<img width="1440" alt="Screen Shot 2020-12-29 at 22 19 50" src="https://user-images.githubusercontent.com/68426424/103325623-e0f71500-4a8f-11eb-8469-1e305c833e2e.png">
+<img width="1440" alt="Screen Shot 2020-12-29 at 22 19 50" src="https://user-images.githubusercontent.com/68426424/103325736-78f4fe80-4a90-11eb-9acc-fc20bb9947d1.png">
 
 ### ○各テーブルについて
 
