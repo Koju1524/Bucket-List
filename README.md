@@ -48,7 +48,7 @@ Do you have something that you'd like to in the line like skydiving?
 
 ## 使用画面のイメージ
 
-![写真](images/usage.png)
+![images](./images/usage.png)
 
 ## 使用技術
 
@@ -114,7 +114,7 @@ AWS構成図<br>
 ## DB設計
 
 ER図
-![写真](images/ER.png)
+![ER](./images/ER.png)
 
 ### ○各テーブルについて
 
