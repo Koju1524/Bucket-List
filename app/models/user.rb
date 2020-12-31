@@ -51,7 +51,7 @@ class User < ApplicationRecord
     if profile&.avatar&.attached?
       profile.avatar
     else
-      'hot.jpg'
+      'bucket.png'
     end
   end
 
