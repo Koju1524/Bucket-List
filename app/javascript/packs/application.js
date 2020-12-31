@@ -25,7 +25,7 @@ $(function() {
     autoplay: true,
     autoplaySpeed: 1300,
     speed: 500
-});
+  });
 
   $('.slick-dots li').on('mouseover', function() {
     $('.a').slick('goTo', $(this).index());
