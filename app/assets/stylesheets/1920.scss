@@ -1,39 +1,23 @@
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
+
   .profilePage_user_info_figures {
 
     p {
-      padding: 10px 136px;
+      padding: 20px 140px;
     }
   }
   
   .profilePage_user_info_title {
 
     p {
-      padding: 0px 110px;
+      padding: 0px 112px;
     }
   }
 
-  .card {
-    padding: 0 300px 430px 300px;
+
+  .bucket_list_image {
+    height: 500px;
+    padding: 0 150px;
   }
 
-  .slick-track {
-    height: 630px;
-  }
-
-  
-  .card_thumb {
-    top: 415px;
-  }
-
-  .card_item1 {
-    position: relative;
-    top: 415px;
-  }
-
-  .slick-dots {
-    li {
-      top: 440px;
-      }
-  }
 } 
