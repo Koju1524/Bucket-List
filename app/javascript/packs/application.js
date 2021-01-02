@@ -17,18 +17,3 @@ require("jquery")
 
 require("trix")
 require("@rails/actiontext")
-
-$(function() {
-
-  $('.bucket_list_image').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 1300,
-    speed: 500
-  });
-
-  $('.slick-dots li').on('mouseover', function() {
-    $('.a').slick('goTo', $(this).index());
-  });
-
-});
