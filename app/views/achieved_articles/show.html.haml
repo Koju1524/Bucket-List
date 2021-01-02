@@ -31,17 +31,13 @@
       %div.content
         = @achieved_article.achieved_day 
       %div.bucket_list_image
-        - @achieved_article.images.each do |image|
-          = image_tag(image, width:0, height:0)
-
+        = image_tag @achieved_article&.images[0] || 'bucket.png', class: 'bucket_list_image'
     .card_iteam
       - if user_signed_in?
         - if current_user.has_thumbs_up(@achieved_article)
           = render 'achieved_articles/unthumbs_up'
         - else
           = render 'achieved_articles/thumbs_up'
-
-= javascript_pack_tag 'article'   
 
 .article
   %h4 Comments
