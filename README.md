@@ -3,7 +3,7 @@
 
 URL：http://54.238.155.175/
 
-こちらのアカウントを使ってください
+こちらのアカウントを使用してください<br>
 Email: ruby@icloud.como<br>
 Password: rubyonrails
 
