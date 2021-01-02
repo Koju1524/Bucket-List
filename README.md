@@ -56,7 +56,6 @@ Do you have something that you'd like to in the line like skydiving?
 
 ### ○フロントエンド
 HTML / SCC / Sass / Bootstrap /
-slick<br>
 jquery-rails　4.4.0<br>
 
 ### ○バックエンド
@@ -70,7 +69,6 @@ AWS ( EC2, S3, Route53, VPC, IAM )
 
 ### ○その他使用ツール
 Visual Studio Code<br>
-
 
 
 ## 機能一覧
@@ -87,8 +85,6 @@ Visual Studio Code<br>
 
 　Bucket Listを新規作成し、それを達成することができた場合、編集ページの達成フラグから達成を選択すると、達成したBucket Listのページに遷移します。<br>
 そして、感想やアドバイスなどのカラムを記入すると、達成済みBucket Listに移行されます。
-
-　また、このとき写真を複数投稿でき、写真をスライドしてみることができる
 
 　ホームページの左上のBucket Listを押すと全ユーザーが投稿したBucket Listをみることができ、Bucket Listのタグを押すと、フォローしているユーザーのBucket List、達成できたBucket Listのタグを押すと、フォローしているユーザーの達成したBucket Listを閲覧することができます。
 
