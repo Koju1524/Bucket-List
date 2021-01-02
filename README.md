@@ -4,7 +4,7 @@
 URL：http://54.238.155.175/
 
 こちらのアカウントを使ってください
-Email: ruby@icloud.como
+Email: ruby@icloud.como<br>
 Password: rubyonrails
 
 ![bucket-list-3675656_1280](https://user-images.githubusercontent.com/68426424/103326168-6c71a580-4a92-11eb-9017-c2953ea29738.png)
