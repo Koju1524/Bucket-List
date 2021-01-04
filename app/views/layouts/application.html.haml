@@ -23,7 +23,7 @@
             - if current_user.profile&.avatar&.attached?
               = image_tag current_user.profile.avatar, class: 'user_avatar'
             - else
-              = image_tag 'hot.jpg', class: 'user_avatar'
+              = image_tag 'bucket.png', class: 'user_avatar'
             .dropdown-content.mini
               = link_to 'プロフィール', profile_path, {:style=>'text-decoration:none;'}
               = link_to 'お気に入りの達成BucketList', favorites_path, {:style=>'text-decoration:none;'}
