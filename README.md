@@ -1,7 +1,11 @@
 # Bucket List
 人生でやってみたいこと・挑戦したいことを投稿するSNSアプリです。
 
-URL：
+URL：http://54.238.155.175/
+
+こちらのアカウントを使用してください<br>
+Email: ruby@icloud.com<br>
+Password: rubyonrails
 
 ![bucket-list-3675656_1280](https://user-images.githubusercontent.com/68426424/103326168-6c71a580-4a92-11eb-9017-c2953ea29738.png)
 
@@ -56,7 +60,6 @@ Do you have something that you'd like to in the line like skydiving?
 
 ### ○フロントエンド
 HTML / SCC / Sass / Bootstrap /
-slick<br>
 jquery-rails　4.4.0<br>
 
 ### ○バックエンド
@@ -70,7 +73,6 @@ AWS ( EC2, S3, Route53, VPC, IAM )
 
 ### ○その他使用ツール
 Visual Studio Code<br>
-
 
 
 ## 機能一覧
@@ -87,8 +89,6 @@ Visual Studio Code<br>
 
 　Bucket Listを新規作成し、それを達成することができた場合、編集ページの達成フラグから達成を選択すると、達成したBucket Listのページに遷移します。<br>
 そして、感想やアドバイスなどのカラムを記入すると、達成済みBucket Listに移行されます。
-
-　また、このとき写真を複数投稿でき、写真をスライドしてみることができる
 
 　ホームページの左上のBucket Listを押すと全ユーザーが投稿したBucket Listをみることができ、Bucket Listのタグを押すと、フォローしているユーザーのBucket List、達成できたBucket Listのタグを押すと、フォローしているユーザーの達成したBucket Listを閲覧することができます。
 
